@@ -1,4 +1,4 @@
-# Russian regional economic monitoring datasets
+# Russian regional economic datasets
 
 ##Pseudocode for data import 
 
