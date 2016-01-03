@@ -1,44 +1,61 @@
+# -*- coding: utf-8 -*-
+
 """индексы цен производителей промышленных товаров.xlsm
 индексы цен производителей на реализованную сельскохозяйственн продукцию.xls
 индексы цен производителей cтроительной продукции.xlsx
 индексы цен (тарифов) на грузовые перевозки.xls
 цены на первичном и вторичном рынках жилья.xls"""
 
+from pandas import read_excel, DataFrame
+from modules import find_file, read_data
+import os
+
 # must use 'sheet' if more than 1 sheet in Excel workbook
 
 source_definitions = [
-{   'varname':'PPI_PROM_ytd', 
-     'folder':'11 цены производителей', 
-   'filename':'индексы цен производителей промышленных товаров.xlsm',
-      'sheet':'пром.товаров',
-     'anchor':'B5', 'anchor_value': 96.6}
+    {'varname': 'PPI_PROM_ytd',
+     'folder': '11 цены производителей',
+     'filename': 'индексы цен производителей промышленных товаров.xlsm',
+     'sheet': 'пром.товаров',
+     'anchor': 'B5',
+     'anchor_value': 96.6},
      
-, { 'varname':'PPI_CONSTR_ytd', 
-     'folder':'11 цены производителей', 
-   'filename':'индексы цен производителей промышленных товаров.xlsm',
-      'sheet':'строит.продукция',
-     'anchor':'B5', 'anchor_value': 99.4}
+    {'varname': 'PPI_CONSTR_ytd',
+     'folder': '11 цены производителей',
+     'filename': 'индексы цен производителей cтроительной продукции.xlsx',
+     'sheet': 'строит.продукция',
+     'anchor': 'B5',
+     'anchor_value': 99.4},
+
+    {'varname': 'PPI_TRANSP_ytd',
+     'folder': '11 цены производителей',
+     'filename': 'индексы цен (тарифов) на грузовые перевозки.xls',
+     'sheet': 'грузовые перевозки',
+     'anchor': 'B5',
+     'anchor_value': 102.8},
 
 #### MUST CHANGE
      
-, { 'varname':'PPI_AGRO_ytd', 
-     'folder':'11 цены производителей', 
-   'filename':'индексы цен производителей на реализованную сельскохозяйственн продукцию.xls',
-      'sheet':'пром.товаров',
-     'anchor':'B5', 'anchor_value': 99.4}
+    {'varname': 'PPI_AGRO_ytd',
+     'folder': '11 цены производителей',
+     'filename': 'индексы цен производителей на реализованную сельскохозяйственн продукцию.xls',
+     'sheet': 'сельск.продукция',
+     'anchor': 'B5',
+     'anchor_value': 99.5},
      
-, {   'varname':'PPI_rog', 
-     'folder':'11 цены производителей', 
-   'filename':'цены на первичном и вторичном рынках жилья.xls',
-      'sheet':'пром.товаров',
-     'anchor':'B5'
-     
- , {'varname':'PPI_rog', 
-     'folder':'11 цены производителей', 
-   'filename':'цены на первичном и вторичном рынках жилья.xls',
-      'sheet':'пром.товаров',
-     'anchor':'B5'     
-     }
+    {'varname': 'PPI_rog_prim',
+     'folder': '11 цены производителей',
+     'filename': 'цены на первичном и вторичном рынках жилья.xls',
+     'sheet': 'первичный рынок',
+     'anchor': 'B5',
+     'anchor_value': 50465},
+
+    {'varname': 'PPI_rog_sec',
+     'folder': '11 цены производителей',
+     'filename': 'цены на первичном и вторичном рынках жилья.xls',
+     'sheet': 'вторичный рынок',
+     'anchor': 'B5',
+     'anchor_value': 57806}
      ]
      
 #### END - MUST CHANGE
@@ -102,7 +119,7 @@ sidebar_doc = """Российская Федерация 1
 Кировская область
 Нижегородская область
 Оренбургская область
-Пензенская область 
+Пензенская область
 Самарская область
 Саратовская область
 Ульяновская область
@@ -124,7 +141,7 @@ sidebar_doc = """Российская Федерация 1
 Красноярский край
 Иркутская область
 Кемеровская область
-Новосибирская область  
+Новосибирская область
 Омская область
 Томская область
 Дальневосточный федеральный округ
@@ -202,7 +219,7 @@ testable_sidebar_doc = """Российская Федерация
 Кировская область
 Нижегородская область
 Оренбургская область
-Пензенская область 
+Пензенская область
 Самарская область
 Саратовская область
 Ульяновская область
@@ -241,6 +258,10 @@ testable_sidebar_doc = """Российская Федерация
 Республика Крым
 г. Севастополь"""
 
+years = [2009, 2010, 2011, 2012, 2013, 2014, 2015]
+months = ['январь', 'февраль', 'март', 'апрель', 'май', 'июнь',
+          'июль', 'август', 'сентябрь', 'октябрь', 'ноябрь', 'декабрь']
+
 actual_sidebar_list = sidebar_doc.split("\n")
 testable_region_names = testable_sidebar_doc.split("\n")
 
@@ -248,14 +269,44 @@ for ar, tr in zip(actual_sidebar_list, testable_region_names):
     # print(ar, "=", tr)
     assert tr in ar
 
-testable_district_names  = ['Центральный', 'Северо-Западный', 'Южный', 'Северо-Кавказский', 
-                            'Приволжский', 'Уральский', 'Сибирский', 'Дальневосточный', 'Крымский']
+testable_district_names = ['Центральный', 'Северо-Западный', 'Южный', 'Северо-Кавказский',
+                           'Приволжский', 'Уральский', 'Сибирский', 'Дальневосточный', 'Крымский']
 assert len(testable_district_names) == 9
 
 RF = "Российская Федерация"
 
-# todo: 
-# - summable regions
-# - regions by district
-# - test all files sidebars confirm with the pattern, raise exception or issue warning if not
 
+var = 4
+fname = find_file(source_definitions[var]['filename'], os.getcwd())
+
+dfile = read_excel(fname[0], sheetname=source_definitions[var]['sheet'], skiprows=0, skip_footer=0)
+
+
+def datafile_read_test():
+    # Test if DataFrame
+    assert isinstance(dfile, DataFrame)
+
+    # Test first value in file ('anchor_value')
+    assert dfile.values[3][1] == source_definitions[var]['anchor_value']
+
+    # Test if all regions names are in the opened file
+    for test_nm, nm in zip(dfile.values[3:], testable_region_names):
+        # if nm not in test_nm[0]:
+        #     print(nm, '=', test_nm[0])
+        assert "".join(nm.split()) in "".join(test_nm[0].split())
+
+    # Test if all years are in file read
+    test_years = ["".join(ii.split()) for ii in dfile.values[1] if str(ii) != 'nan']
+    years_ = [(str(ii) + 'год') for ii in years]
+    assert test_years == years_
+
+    # Test if month or quarter names are read properly
+    if 'январь' in dfile.values[2]:
+        for m in dfile.values[2][1:]:   # month
+            assert "".join(m.split()) in months
+    else:
+        for q in dfile.values[2][1:]:   # quarter
+            assert 'квартал' in q
+
+if __name__ == "__main__":
+    datafile_read_test()
