@@ -1,4 +1,4 @@
-"""индексы цен производителей промышленных товаров.xlsm
+filenames_for_testing = """индексы цен производителей промышленных товаров.xlsm
 индексы цен производителей на реализованную сельскохозяйственн продукцию.xls
 индексы цен производителей cтроительной продукции.xlsx
 индексы цен (тарифов) на грузовые перевозки.xls
@@ -41,7 +41,7 @@ source_definitions = [
      }
      ]
      
-#### END - MUST CHANGE
+#### END of MUST CHANGE
 
 sidebar_doc = """Российская Федерация 1
 Центральный федеральный округ
@@ -141,8 +141,8 @@ sidebar_doc = """Российская Федерация 1
 Республика Крым
 г. Севастополь"""
 
-# (1) trauncated 'федеральный округ' and whitespace around it
-# (2) trauncated region name with witespaces or many words
+# (1) truncated 'федеральный округ' and whitespace around it
+# (2) truncated region name with whitespaces or many words
 testable_sidebar_doc = """Российская Федерация
 Центральный
 Белгородская область
@@ -244,6 +244,8 @@ testable_sidebar_doc = """Российская Федерация
 actual_sidebar_list = sidebar_doc.split("\n")
 testable_region_names = testable_sidebar_doc.split("\n")
 
+
+# important data check - may check as 'tr' in 'ar'
 for ar, tr in zip(actual_sidebar_list, testable_region_names):
     # print(ar, "=", tr)
     assert tr in ar
@@ -253,9 +255,3 @@ testable_district_names  = ['Центральный', 'Северо-Западн
 assert len(testable_district_names) == 9
 
 RF = "Российская Федерация"
-
-# todo: 
-# - summable regions
-# - regions by district
-# - test all files sidebars confirm with the pattern, raise exception or issue warning if not
-
