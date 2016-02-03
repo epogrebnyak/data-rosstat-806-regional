@@ -4,7 +4,6 @@
 
 Started implementation at [pseudo.py](pseudo.py)
 
-
 TODO: need test for import results, checking the following - 
 ```
 def_dict0 = {'varname':'PPI_PROM_ytd', 
@@ -47,7 +46,10 @@ assert os.path.exists(get_filename(def_dict0))
 5. Emit a stream of (assinged varname, rown, coln, value) from sheet - use xlrd?
   - may substitute coln, rown with colx, rowx
 6. Convert *coln* to date, based on fact that all date ranges start with Jan 2009 (column B = Jan 2009, column C = Feb 2009, etc): ```dt = col_to_date(coln, source_def)```
-7. Convert *rown* to region name ```region_name = row_to_region_name(rown, sheet)``` making comparison to reference list of regions.
+7. Convert *rown* to region name ```region_name = row_to_region_name(rown, sheet)``` making comparison to reference list of regions + substitute some region names
+   - also mask/subset stream of (assinged varname, rown, coln, value) based on desired output - see below
+   - may need to construct a substitution dictionary based on testable_sidebar_doc and sidebar_doc
+   - also check if all rownames are like sidebar_doc, otherwise add to dict
 8. Get dataframes as below:
 ```    
 df1 = df_get_all_rows_from_sheet(source_def)
@@ -61,8 +63,8 @@ Note: from every sheet can also read a flat stream like (varname, region_name, d
 10. Save:
  - all obtained dataframes as sheets in resulting files as tables  RF + districts + summable regions
  - as all-RF data by variable and by date
- - suggested pattern in xls (for SA)
- - list of variables
+ - suggested pattern in xls (for SA) - TODO- must save to project
+ - list of variables as varnames.md
 
 
 ## Source URL
