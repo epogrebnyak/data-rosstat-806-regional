@@ -66,6 +66,12 @@ Note: from every sheet can also read a flat stream like (varname, region_name, d
  - suggested pattern in xls (for SA) - TODO- must save to project
  - list of variables as varnames.md
 
+# More notes:
+#
+# todo: 
+# - summable regions
+# - regions by district
+#
 
 ## Source URL
 <http://www.gks.ru/wps/wcm/connect/rosstat_main/rosstat/ru/statistics/publications/catalog/doc_1246601078438>
@@ -80,3 +86,5 @@ Note: from every sheet can also read a flat stream like (varname, region_name, d
 «Информация для ведения мониторинга социально-экономического положения субъектов Российской Федерации» выпускается ежемесячно с апреля 2009 года.
 
 График публикации в 2015 году: <http://www.gks.ru/gis/images/graf-oper2015.htm>
+
+
