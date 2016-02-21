@@ -25,3 +25,12 @@ rf  = get_rf_dataframe(source_def_sample)
 
 #TODO 1:
 #write asserts for reg, okr and rf that check import was properly done
+
+# tests check the following:
+# - class of output is dataframe  
+# - dataframe column list 
+# - dataframe index
+# - selected values in dataframe
+#   -- anchor value is found 
+#   -- several other values are referenced by region and date the value equals to test value  
+# - something else?
