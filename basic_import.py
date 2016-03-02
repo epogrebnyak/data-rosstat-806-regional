@@ -4,25 +4,6 @@ source_def_sample = {   'varname':'PPI_PROM_ytd',
       'sheet':'пром.товаров',
      'anchor':'B5', 'anchor_value': 96.6}
      
-# region names
-import sidebar
-
-def get_regions_dataframe(source_def):
-    """Return pandas DataFrame containing variable from *source_def* by REGION"""
-    pass
-    
-def get_okrug_dataframe(source_def):
-    """Return pandas DataFrame containing variable from *source_def* by FEDERAL DISTRICT (okrug)"""
-    pass
-
-def get_rf_dataframe(source_def):
-    """Return pandas DataFrame containing variable from *source_def* by RUSSIA TOTAL"""
-    pass
-
-reg = get_regions_dataframe(source_def_sample)
-okr = get_okrug__dataframe(source_def_sample)
-rf  = get_rf_dataframe(source_def_sample)
-
 # 1. Excel sheet reader: read_sheet(xl_filename, xl_sheet) will yield tuple (value, region, date)
 # - in (value, region, date):
 #  -- 'value' is self-explanatory
@@ -37,7 +18,7 @@ rf  = get_rf_dataframe(source_def_sample)
 
 from datetime import date
 import pandas as pd
-from sidebar import actual_region_names, testable_region_names
+from sidebar import actual_sidebar_list, testable_region_names
 
 def yearmon(year, month):
      return date(year, month, 1) 
@@ -47,8 +28,10 @@ def filter_raw_sidenames(sidename):
         Valid rows names are *sidebar.testable_region_names*"""
      pass
   
-for a,v in zip(actual_region_names, testable_region_names):
-   assert v == filter_raw_sidenames(a)       
+for a,v in zip(actual_sidebar_list, testable_region_names):
+   pass
+   # must pass assert below:
+   #assert v == filter_raw_sidenames(a)       
 
 def read_sheet(xl_filename, xl_sheet):
      """Read data from Excel sheet and yield it as a stream of datapoints"""
@@ -57,7 +40,8 @@ def read_sheet(xl_filename, xl_sheet):
      yield (101.5, "Российская Федерация", yearmon(2009, 2))
      yield (104.4, "Российская Федерация", yearmon(2009, 3))
      yield (107.0, "Российская Федерация", yearmon(2009, 4))
-
+     yield (118,   "Чукотский авт.округ",  yearmon(2015, 12))
+     
 gen = read_sheet(xl_filename=source_def_sample['filename'], xl_sheet=source_def_sample['sheet'])
 assert next(gen) == (96.6,  "Российская Федерация", yearmon(2009, 1))
 
@@ -80,30 +64,55 @@ df = get_dataframe(xl_filename=source_def_sample['filename'], xl_sheet=source_de
 assert isinstance(df, pd.DataFrame)
 
 # - dataframe column list 
-
 # todo: df.columns must have same content as testable_region_names
 # assert
 
+for col in df.columns:
+   assert col in  testable_region_names
+
 # - dataframe index
-# todo: Dateindex starting Jan 2009
+# index starts with Jan 2009
+assert df.index[0].year == 2009
+assert df.index[0].month == 1
+
+# todo: other checks for index
 
 # - selected values in dataframe:
-# not tested:
 assert df['Российская Федерация']['2009-01-01'] == 96.6
 
-# - something else to be tested
+# check bottom-right 
+assert df['Чукотский авт.округ']['2015-12-01'] == 118
+
+# - something else to be tested ?
 
 
 
 # BELOW IS NOT TODO:
 
 # 3. Three dataframes from Excel sheet:
-#    - Russian Federation (df_rf)
-#    - federal district (okrug)  (df_districts)
-#    - regions (without) (df_regions)
+#    - Russian Federation (rf)
+#    - federal district (okr)  
+#    - regions (without) (reg)
 # See sidebar.py for district names. Must add district composition 
 
 # tests to pass:
 # 3.1 for summable values summ by regions equals Russian Federation total 
 # 3.2 for summable values summ by districts equals Russian Federation total 
 # 3.3 with summation matrix for summable values summ by region in district equals district total 
+
+
+def get_regions_dataframe(source_def):
+    """Return pandas DataFrame containing variable from *source_def* by REGION"""
+    pass
+    
+def get_okrug_dataframe(source_def):
+    """Return pandas DataFrame containing variable from *source_def* by FEDERAL DISTRICT (okrug)"""
+    pass
+
+def get_rf_dataframe(source_def):
+    """Return pandas DataFrame containing variable from *source_def* by RUSSIA TOTAL"""
+    pass
+
+reg = get_regions_dataframe(source_def_sample)
+okr = get_okrug_dataframe(source_def_sample)
+rf  = get_rf_dataframe(source_def_sample)
