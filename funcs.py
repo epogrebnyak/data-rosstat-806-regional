@@ -1,40 +1,63 @@
-def filter_raw_sidenames(test_region:str, etalon_region_titles:list):
+# COMMENT: funcs.py too generic name, maybe filter_raw_sidenames.py?
+
+def filter_raw_sidenames(raw_region_name:str, reference_regions:list):
+    #QUESTION: ":str" это что-то очень новое или очень старое? где можно почитать про объявление типа в питоне?
+    
     """
-    converts a raw region title to etalon region title
+    Converts a raw region title to reference region title
     Inputs:
-        etalon_region_titles - list of etalon region titles
-        test_region    - string with raw region title
+        reference_regions - list of reference region titles
+        raw_region_name - string with raw region title
     Output:
-        string with etalon region titles
+        string with reference region titles
            or
         None  (if no one matched)
     """
+    # COMMENT: if output is string, better return empty string "" when not found  
+    
     def purifying(region):
         return region.replace("округов", "округа").replace("в том числе","").replace(" ", "").strip("0123456789")
 
-    found = []
-    test_region = purifying(test_region)
-    for region in etalon_region_titles:
-        r = region.replace(" ", "").replace("округов", "округа")
-        if r==test_region:
+    matched_reference_names = []
+    raw_region_name = purifying(raw_region_name)
+    
+    for ref_region in reference_regions:
+    
+        # QUESTION: is this a duplicate of purifing? 
+        #           why not ref_region = purifying(ref_region)
+        #           better without extra new variable *r*         
+        r = ref_region.replace(" ", "").replace("округов", "округа")
+        
+        # raw_region_name name matches reference name exactly 
+        if r==raw_region_name:
             return region #exact match
+            
         else:
-            if r in test_region:
-                found.append(region)
-    if len(found)==1:
-        return found[0] #  if only one is similar
-    elif len(found)>0:
-        return max(found, key = len) # return longest matched region
+            if r in raw_region_name:
+                matched_reference_names.append(region)
+    
+    #  if only one is similar            
+    if len(matched_reference_names)==1:
+        return matched_reference_names[0]
+        
+    # return longest matched region    
+    elif len(matched_reference_names)>0:
+        return max(matched_reference_names, key = len) 
+    
     # returning None if no one match
+    return ""
 
 if __name__=="__main__":
     from sample_regions1 import regions
-    from region_titles import etalon_region_titles
-    ##
-    sample_etalon = list(regions.values())
+    #QUESTION: what is  sample_regions1? file seems missing
+    
+    from region_titles import reference_regions    
+    
+    sample_reference = list(regions.values())
     row_regions = sorted(list(regions.keys()))
-    assert set(sample_etalon)==set(etalon_region_titles), "Etalons not match"
+    assert set(sample_reference)==set(reference_regions), "references not match"
 
     for r in row_regions:
-        print(filter_raw_sidenames(r, etalon_region_titles).__repr__(),"::", r.__repr__())
+        # cannot understand the intent of ___repr__()
+        print(filter_raw_sidenames(r, reference_regions).__repr__(),"::", r.__repr__())
         
