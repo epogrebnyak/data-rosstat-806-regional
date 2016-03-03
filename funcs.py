@@ -50,6 +50,8 @@ def filter_raw_sidenames(raw_region_name:str, reference_regions:list):
 if __name__=="__main__":
     from sample_regions1 import regions
     #QUESTION: what is  sample_regions1? file seems missing
+    #COMMENT - I noticed sys.path.append(os.path.dirname(os.path.dirname(__file__))) in other file, not best practive unless VERY needed. 
+    #Suggested import: from test.sample_regions import ...  - make it importable from package  
     
     from region_titles import reference_regions    
     
