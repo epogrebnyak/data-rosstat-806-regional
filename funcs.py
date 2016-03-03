@@ -10,12 +10,12 @@ def filter_raw_sidenames(test_region:str, etalon_region_titles:list):
         None  (if no one matched)
     """
     def purifying(region):
-        return region.replace("в том числе","").replace(" ", "").strip("0123456789")
+        return region.replace("округов", "округа").replace("в том числе","").replace(" ", "").strip("0123456789")
 
     found = []
     test_region = purifying(test_region)
     for region in etalon_region_titles:
-        r = region.replace(" ", "")
+        r = region.replace(" ", "").replace("округов", "округа")
         if r==test_region:
             return region #exact match
         else:
