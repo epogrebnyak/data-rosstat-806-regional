@@ -84,7 +84,9 @@ if __name__ == "__main__":
     df = get_dataframe_by_definition(def_dict_2)
     for dist, regs in region_by_district.items():
         z = df[regs].fillna(0).sum(axis = 1) - df[dist]
-        print(dist, sum(abs(z)))
+        if sum(abs(z)) > 10:
+           print(dist, sum(abs(z)))
+           
+    to_excel(def_dict_2)
        
-    
-    
+       
