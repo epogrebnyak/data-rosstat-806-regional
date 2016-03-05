@@ -9,6 +9,8 @@
 # - starting date can be assumed alwauys to be is Jan 2009
 # - region names are dirty - contain some variations of original name. need filter function for substitution
 
+# Test: 
+#    - search function for anchor     
 
 import os
 from datetime import date
@@ -28,17 +30,37 @@ def filter_cellvalue(x):
         return x
     else:
         return np.nan 
-     
-def read_sheet(xl_filename, xl_sheet, anchor):
+
+def read_sheet(xl_filename, xl_sheet, anchor=None):
     """Read data from Excel sheet and yield it as a stream of datapoints"""
     
+    # determine a start position
+    def seek_origin(sheet, value = "январь"):
+         def gen_coords():
+              for n in range(20):
+                   r,c = n,0
+                   while True:
+                       yield (r,c)
+                       if c==n:
+                           break
+                       r-=1
+                       c+=1
+         coords = gen_coords()
+         while True:
+              r,c = next(coords)
+              if cur_sheet.cell(r,c).value==value:
+                   return (r+1,c) 
+         
     wb = xlrd.open_workbook(xl_filename)
     cur_sheet = wb.sheet_by_name(xl_sheet)
 
     # starting position
-    r0,c0 = xl_cell_to_rowcol(anchor)
+    if not anchor:
+        r0,c0 = seek_origin(cur_sheet)
+    else:    
+        r0,c0 = xl_cell_to_rowcol(anchor)
     
-    # two rows up from r0,c0
+    # strat year is two rows up from r0,c0
     start_year = int(cur_sheet.cell(r0-2,c0).value.split()[0])
     assert start_year == 2009
     
@@ -50,13 +72,16 @@ def read_sheet(xl_filename, xl_sheet, anchor):
     for r, region in enumerate(regions,start=r0):
         for m, c in enumerate(range(c0,cur_sheet.ncols)):
             year, month = start_year + m//12, m%12 + 1
-            #cur_sheet.cell(r,c).value may be float or str 
+            #cur_sheet.cell(r,c).value may be float or str - must filter value
             val = filter_cellvalue(cur_sheet.cell(r,c).value)
             yield (val,region,yearmon(year, month)) 
             
-def read_by_definition(def_dict):
+def read_by_definition(def_dict, use_anchor = False):
     file_path = os.path.join(def_dict['folder'], def_dict['filename'])
-    return read_sheet(file_path, def_dict['sheet'], def_dict['anchor'])
+    if use_anchor:
+        return read_sheet(file_path, def_dict['sheet'], def_dict['anchor'])
+    else:
+        return read_sheet(file_path, def_dict['sheet'])
     
 if __name__=="__main__":
     source_def_sample = {
@@ -68,5 +93,10 @@ if __name__=="__main__":
     
     gen = read_by_definition(source_def_sample) 
     assert next(gen) == (96.6,  "Российская Федерация", yearmon(2009, 1))
-    for i in range(1000):
+    for i in range(10):
         print(next(gen))
+        
+    gen1 = read_by_definition(source_def_sample, True)
+    gen2 = read_by_definition(source_def_sample, False)    
+    assert next(gen1) == next(gen2)
+    

@@ -6,7 +6,7 @@ source_def_sample = {'varname':'PPI_PROM_ytd',
      
 import pandas as pd
 
-from basic_import import get_dataframe_by_definition
+from df_getter import get_dataframe_by_definition
 from regions import reference_region_names
    
 df = get_dataframe_by_definition(source_def_sample)
