@@ -9,6 +9,8 @@
 # - starting date can be assumed alwauys to be is Jan 2009
 # - region names are dirty - contain some variations of original name. need filter function for substitution
 
+# Test: 
+#    - search function for anchor     
 
 import os
 from datetime import date
@@ -29,12 +31,16 @@ def filter_cellvalue(x):
     else:
         return np.nan 
      
-def read_sheet(xl_filename, xl_sheet, anchor):
+def read_sheet(xl_filename, xl_sheet, anchor=None):
     """Read data from Excel sheet and yield it as a stream of datapoints"""
     
     wb = xlrd.open_workbook(xl_filename)
     cur_sheet = wb.sheet_by_name(xl_sheet)
-
+    
+    if not anchor:  
+       # todo: must have some code for searching upper-left corner of data region on sheet     
+       anchor = "B5"
+    
     # starting position
     r0,c0 = xl_cell_to_rowcol(anchor)
     
