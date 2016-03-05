@@ -96,7 +96,5 @@ if __name__=="__main__":
     for i in range(10):
         print(next(gen))
         
-    gen1 = read_by_definition(source_def_sample, True)
-    gen2 = read_by_definition(source_def_sample, False)    
-    assert next(gen1) == next(gen2)
+
     
