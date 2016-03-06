@@ -96,6 +96,10 @@ if __name__=="__main__":
     for i in range(10):
         print(next(gen))
         
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> master
     gen1 = read_by_definition(source_def_sample, True)
     gen2 = read_by_definition(source_def_sample, False)    
     assert next(gen1) == next(gen2)
@@ -103,3 +107,11 @@ if __name__=="__main__":
     for r in read_by_definition(source_def_sample):
         if "Тюмен" in r[1]:
             print(r)
+<<<<<<< HEAD
+    
+=======
+
+    
+>>>>>>> master
+=======
+>>>>>>> master

@@ -71,7 +71,7 @@ reference_region_names = ['Российская Федерация',
   'Кировская область',
   'Нижегородская область',
   'Оренбургская область',
-  'Пензенская область ',
+  'Пензенская область',
   'Самарская область',
   'Саратовская область',
   'Ульяновская область',
@@ -169,7 +169,7 @@ summable_regions = [#'Российская Федерация',
   'Кировская область',
   'Нижегородская область',
   'Оренбургская область',
-  'Пензенская область ',
+  'Пензенская область',
   'Самарская область',
   'Саратовская область',
   'Ульяновская область',
@@ -353,6 +353,7 @@ def filter_region_name(raw_region_name:str, reference_regions = reference_region
     # return longest matched region    
     ## EP/QUESTION: in what cases is this the case? 'Тюменская область без авт. округов'?
     ##              is it a secure matching procedure?
+    ## Yes. in matched_reference_names my be titles only from *reference_region_names*
     elif len(matched_reference_names)>1:
         return max(matched_reference_names, key = len) 
     
@@ -361,7 +362,8 @@ def filter_region_name(raw_region_name:str, reference_regions = reference_region
 
 if __name__ == "__main__":   
 
-    ## EP / QUESTION: why exactly sample_regions_2 used? arbitrary?    
+    ## EP / QUESTION: why exactly sample_regions_2 used? arbitrary?
+    ## Yes. It may be random file from testdata
     from testdata.sample_regions_2 import regions as raw_regions
     
     for r in raw_regions:
