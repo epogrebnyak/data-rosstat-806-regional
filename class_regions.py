@@ -23,8 +23,38 @@ Usage:
     Regions.code(region_name)  # returns code for defined region
     Regions.code('г. Москва')
         ('45', 'RU-MOW')
+"""
 
 """
+Apparent todo: 
+- похоже нет аналога region_by_district https://github.com/epogrebnyak/rosstat-806-regional/blob/master/regions.py#L211
+
+- можете пояснить что нам дает "all  methods are classmethods, no instanse is needed" - не нужно создавать объект класса и 
+  запись короче или есть какая-то более глубокая причина?
+
+- с summable_regions может быть проблема по годам - до 2015 это одни, c 2015 могут быть другие (области c 2015 года разбиты по регионы, 
+  хочется воспользоваться этой информацией), сделать:
+  
+  Regions.summable_regions(year = None)
+  Regions.summable_regions(2015) - выдает округа и область без округов на Архантельску и Тюмени
+  Regions.summable_regions() или Regions.summable_regions(2009)- выдает список только по областям
+  
+- в приницпе также может быть утроен region_by_district(2015)
+  
+- Regions.code('г. Москва') по нему несколько пожеланий 
+
+  0. Коды ОКАТО сделать типом int
+
+  1. резултатом должен быть словарь типа  ('name':'Белгородская область', 'int_code':14, 'en_abbr':'RU-BEL')
+  
+  2. сделать Regions.code() универсальным по входному параметру - Regions.code('Белгородская область'), Regions.code(14), 
+     Regions.code('RU-BEL') возвращают один и тот же словарь. Разбор типа параметра - если начинается с русских букв, 
+     если int и если начинается с 'RU-', если не подходит то ValueError
+     
+- (потом /not todo) найти в ГОСТе или придумать коды для федеральных округов
+
+"""
+
 
 class Regions:
     __REGIONS__ = OrderedDict((
@@ -230,8 +260,3 @@ if __name__=="__main__":
 
     assert reference_region_names == Regions.names()
     assert summable_regions == Regions.summable_regions()
-
-    
-    
-    
-    
