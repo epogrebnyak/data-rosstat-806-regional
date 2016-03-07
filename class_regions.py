@@ -235,14 +235,59 @@ class Regions:
         return "Российская Федерация"
 
     @classmethod
-    def code(cls,region):
+    def code(cls, arg):
+        out_code = lambda r,data:{'name':r, 'code':data[2], 'en_abbr':data[3]} 
+        code_OKATO, code_ISO = None, None
+        if arg in cls.__REGIONS__:
+            if cls.__REGIONS__[arg][0]=="R":
+                return out_code(arg, cls.__REGIONS__[arg])
+            else:
+                return None
+        else:
+            for r, data in cls.__REGIONS__.items():
+                if data[0]!= "R":
+                    continue
+                elif arg==data[3] or any(str(arg)==d for d in data[2].split("/")):
+                    return out_code(r, data)
+                    
+                
+        
         return cls.__REGIONS__[region.strip()][2:]
+
+    @classmethod
+    def region_by_district(cls,district):
+        assert district in cls.district_names()
+        regions = []
+        found = False
+        for r, data in cls.__REGIONS__.items():
+            if r==district:
+                found=True
+                continue
+            elif found and data[0]=="D": #if found next district name
+                return regions
+            elif found and data[1]:
+                regions.append(r)
+        return regions
+            
+                
 
 
 #self testing        
 if __name__=="__main__":
-    from regions import district_names, rf_name, reference_region_names, summable_regions, filter_region_name
+    from regions import district_names, rf_name, reference_region_names, summable_regions, filter_region_name, region_by_district
     assert filter_region_name("   г.Москва  5")==Regions.filter_region_name("   г. Москва  4")
+    print("Code testing")
+
+    print(Regions.code("Брянская область"))
+    print(Regions.code("г. Севастополь"))
+    print(Regions.code(77))
+    print(Regions.code(4))
+    print(Regions.code(7110))  #"7110/718", "RU-KHM"
+    print(Regions.code("RU-SA"))
+    print(Regions.code("Российская Федерация"))
+    print(Regions.code("Крымский федеральный округ"))
+          
+ 
     print(Regions.code('г. Москва'))
     print(*Regions.code_table(), sep="\n")
     
@@ -257,6 +302,14 @@ if __name__=="__main__":
     
     print(set(reference_region_names)-set(Regions.names()))
     print(set(Regions.names())-set(reference_region_names))
+
+    print("District testing")
+    for d in Regions.district_names():
+    
+        print(d)
+        for r in Regions.region_by_district(d):
+            print(r in region_by_district[d], "\t", r )
+        assert region_by_district[d]==Regions.region_by_district(d)
 
     assert reference_region_names == Regions.names()
     assert summable_regions == Regions.summable_regions()
