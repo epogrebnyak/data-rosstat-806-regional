@@ -88,10 +88,10 @@ for f in xls_files:
         # EP: do not print debugging to file
         # out.append(l_debug)
         
-        #  Todo:
+        #  Not todo, use language pack for filenames instead: if filename in dictionary, use that value, if not - transliterate
         #  "Profit_%d"%c - не совсем то, неправильно всем файлам вписывать название Profit
         #  первая часть - должна быть как-то связана с названием файла - например можно ли 
-        #  откуда-нибудь взять (не писать самим) код, чтобы дать транслитерацией название файла 
+        #  откуда-нибудь взять (не писать самим) код, чтобы дать транслитерацией название файла  https://pypi.python.org/pypi/transliterate/1.7.6
         #  'индекс промышленного производства' -> 'indeks_promyshlennogo_proizvodstva' 
         #  вторая часть - номер шита, а не сквозной номер 
         
@@ -115,11 +115,4 @@ if __name__=="__main__":
         for l in out:
             print(l, file=f)
         print("]\n", file=f)
-
-
-
-
-    
-
-
-
+        
