@@ -2,6 +2,7 @@ import os
 import xlrd
 from xls_read import seek_origin
 
+DEFINITIONS_FILENAME = "definitions.py"
 
 EXT = ".xls"
 
@@ -76,7 +77,7 @@ for f in xls_files:
         out.append(lines)
         c+=1
 
-with open("definitions.py","w", encoding="utf-8") as f:
+with open(DEFINITIONS_FILENAME,"w", encoding="utf-8") as f:
     print("definition=[", file=f)
     for l in out:
         print(l, file=f)
