@@ -2,7 +2,7 @@ import os
 import xlrd
 from xls_read import seek_origin
 
-DEFINITIONS_FILENAME = "definitions.py"
+DEFINITIONS_FILENAME = "_definitions.py"
 
 EXT = ".xls"
 
