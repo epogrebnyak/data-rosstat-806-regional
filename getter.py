@@ -3,8 +3,8 @@ import pandas as pd
 import os
 
 from xls_read import read_sheet, read_by_definition, yearmon
-
 from regions import Regions
+
 filter_region_name = Regions.filter_region_name
 reference_region_names = Regions.names()
 rf_name = Regions.rf_name()
@@ -22,9 +22,13 @@ def get_dataframe(datapoints_stream):
 def get_dataframe_by_definition(def_dict):
     """Return dataframe corresponding to definition dict."""   
     file_path = os.path.join(def_dict['folder'], def_dict['filename'])
-    gen = read_sheet(file_path, def_dict['sheet'], def_dict['anchor']) 
-    # may want to add variable name as a column
-    return get_dataframe(gen)[Regions.names()]
+    if 'anchor' in def_dict.keys():
+        gen = read_sheet(file_path, def_dict['sheet'], def_dict['anchor']) 
+    else:
+        gen = read_sheet(file_path, def_dict['sheet'])
+    df = get_dataframe(gen)[Regions.names()]
+    df.insert(0, 'varname', def_dict['varname'])
+    return df 
     
 def get_regions_dataframe(def_dict):
     """Return pandas DataFrame containing variable from *def_dict* by REGION"""

@@ -8,7 +8,7 @@ from regions import Regions
 filter_region_name = Regions.filter_region_name
 reference_region_names = Regions.names()
 
-from definition import definition
+from definitions import definitions
 
 # -------------------------------------------------------------------------
 # Defintions
@@ -29,7 +29,7 @@ def_dict_2 = {'varname':'SHIPMENTS',
      'anchor':'B6', 'anchor_value': 5331853.711}    
      
 def test_defintions():
-    assert isinstance(definition[0], dict)
+    assert isinstance(definitions[0], dict)
      
      
 # -------------------------------------------------------------------------
