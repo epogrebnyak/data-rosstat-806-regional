@@ -8,6 +8,8 @@ from regions import Regions
 filter_region_name = Regions.filter_region_name
 reference_region_names = Regions.names()
 
+from definition import definition
+
 # -------------------------------------------------------------------------
 # Defintions
 # -------------------------------------------------------------------------
@@ -26,7 +28,10 @@ def_dict_2 = {'varname':'SHIPMENTS',
       'sheet':'Млн.рублей',
      'anchor':'B6', 'anchor_value': 5331853.711}    
      
-
+def test_defintions():
+    assert isinstance(definition[0], dict)
+     
+     
 # -------------------------------------------------------------------------
 # test_dataframe.py code
 # -------------------------------------------------------------------------
