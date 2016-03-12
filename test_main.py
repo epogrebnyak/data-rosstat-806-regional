@@ -1,18 +1,36 @@
-#
-# test_dataframe.py code
-#
-
-source_def_sample = {'varname':'PPI_PROM_ytd', 
-     'folder':'xl_sample', 
-   'filename':'industrial_prices.xls',
-      'sheet':'пром.товаров',
-     'anchor':'B5', 'anchor_value': 96.6} 
-     
+import os
+import sys
 import pandas as pd
 
-from df_getter import get_dataframe_by_definition
-from regions import reference_region_names
-   
+from getter import get_dataframe_by_definition
+
+from regions import Regions
+filter_region_name = Regions.filter_region_name
+reference_region_names = Regions.names()
+
+# -------------------------------------------------------------------------
+# Defintions
+# -------------------------------------------------------------------------
+
+XL_FOLDER = os.path.join('xls', 'sample')
+
+source_def_sample = {'varname':'PPI_PROM_ytd', 
+     'folder': XL_FOLDER, 
+   'filename':'industrial_prices.xls',
+      'sheet':'пром.товаров',
+     'anchor':'B5', 'anchor_value': 96.6}    
+
+def_dict_2 = {'varname':'SHIPMENTS', 
+     'folder': XL_FOLDER , 
+   'filename':'shipment.xls',
+      'sheet':'Млн.рублей',
+     'anchor':'B6', 'anchor_value': 5331853.711}    
+     
+
+# -------------------------------------------------------------------------
+# test_dataframe.py code
+# -------------------------------------------------------------------------
+  
 df = get_dataframe_by_definition(source_def_sample)
    
 # Tests - tests for dataframe check the following:
@@ -39,25 +57,12 @@ def test_values():
     # check bottom-right 
     assert df['Чукотский авт. округ']['2015-12-01'] == 118
 
-#
+# -------------------------------------------------------------------------
 # test_dataframe.py code
-#
+# -------------------------------------------------------------------------
 
 from xls_read import read_by_definition, yearmon
 
-source_def_sample = {
-        'varname':'PPI_PROM_ytd', 
-        'folder':'xl_sample', 
-        'filename':'industrial_prices.xls',
-        'sheet':'пром.товаров',
-        'anchor':'B5', 'anchor_value': 96.6}
-
-def_dict_2 = {'varname':'SHIPMENTS', 
-     'folder':'xl_sample', 
-   'filename':'shipment.xls',
-      'sheet':'Млн.рублей',
-     'anchor':'B6', 'anchor_value': 5331853.711}    
-        
 def test_first_value():        
     gen = read_by_definition(source_def_sample) 
     assert next(gen) == (96.6,  "Российская Федерация", yearmon(2009, 1))
@@ -71,15 +76,9 @@ def test_auto_search():
     gen2 = read_by_definition(def_dict_2 , False)    
     assert next(gen1) == next(gen2)
     
-#
+# -------------------------------------------------------------------------
 # test_regions.py code
-#
-
-import os
-import sys
-import unittest
-
-from regions import reference_region_names, filter_region_name
+# -------------------------------------------------------------------------
 
 # test data samples in one dict(key=source_xls_filename, value=list of raw titles)
 from testdata import test_regions_dict
@@ -252,7 +251,7 @@ testable_sidebar_doc = """Российская Федерация
 Кировская область
 Нижегородская область
 Оренбургская область
-Пензенская область 
+Пензенская область
 Самарская область
 Саратовская область
 Ульяновская область

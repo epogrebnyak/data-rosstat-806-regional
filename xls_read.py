@@ -20,7 +20,8 @@ import numpy as np
 from xlsxwriter.utility import xl_rowcol_to_cell # (1, 2) -> 'C2'
 from xlsxwriter.utility import xl_cell_to_rowcol # 'C2' -> (1, 2)
 
-from regions import filter_region_name
+from regions import Regions
+filter_region_name = Regions.filter_region_name
 
 def yearmon(year, month):
     return date(year, month, 1)

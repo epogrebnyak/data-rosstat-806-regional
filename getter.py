@@ -2,10 +2,14 @@ from datetime import date
 import pandas as pd
 import os
 
-from regions import filter_region_name
 from xls_read import read_sheet, read_by_definition, yearmon
 
-from regions import reference_region_names, rf_name, district_names, summable_regions
+from regions import Regions
+filter_region_name = Regions.filter_region_name
+reference_region_names = Regions.names()
+rf_name = Regions.rf_name()
+district_names = Regions.district_names()
+summable_regions = Regions.summable_regions()
 
 def get_dataframe(datapoints_stream):
     """Return dataframe corresponding to datapoints stream."""        
@@ -20,7 +24,7 @@ def get_dataframe_by_definition(def_dict):
     file_path = os.path.join(def_dict['folder'], def_dict['filename'])
     gen = read_sheet(file_path, def_dict['sheet'], def_dict['anchor']) 
     # may want to add variable name as a column
-    return get_dataframe(gen)[reference_region_names]
+    return get_dataframe(gen)[Regions.names()]
     
 def get_regions_dataframe(def_dict):
     """Return pandas DataFrame containing variable from *def_dict* by REGION"""

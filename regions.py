@@ -1,7 +1,11 @@
 from collections import OrderedDict
 
 """
-class wrapper for reference_region_names and Код ОКАТО и ОКТМО	Код ISO 3166-2 и ГОСТ 7.67-2003 (https://goo.gl/szxGMG)
+Wrapper class for:
+    reference region names 
+    Код ОКАТО и ОКТМО	
+    Код ISO 3166-2 и ГОСТ 7.67-2003 (https://goo.gl/szxGMG)
+
 Usage:
     import Regions
     Regions.district_names()  # == district_names, all  methods are classmethods, no instanse is needed
@@ -179,7 +183,7 @@ class Regions:
             return raw_region.replace("округов", "округа").replace("в том числе","").strip("0123456789").replace(" ", "")
         
         # rationale: we need names with spaces as the result of this function
-        reverse_dict = {prefilter(r):r for r in reference_region_names}
+        reverse_dict = {prefilter(r):r for r in Regions.names()}
         
         matched_reference_names = []
         raw_region_name = prefilter(raw_region_name)
