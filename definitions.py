@@ -9,7 +9,7 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "январь")
 {
  'varname':'PROD_IND_YOY',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'005-013 индекс промышленного производства.xls',
  'subtitle':'В % к соответствующему месяцу предыдущего года',
  'sheet':" к соотв. месяцу",
@@ -20,10 +20,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'PROD_IND_YTD',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'005-013 индекс промышленного производства.xls',
  'subtitle':'В % к соответствующему периоду предыдущего года',
- 'sheet': "к соотв. периоду",
+ 'sheet':"к соотв. периоду",
  'anchor_value': 81.7
 },
 
@@ -31,10 +31,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'PROD_IND_ROG',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'005-013 индекс промышленного производства.xls',
  'subtitle':'В % к предыдущему месяцу',
- 'sheet': "к пред. месяцу",
+ 'sheet':"к пред. месяцу",
  'anchor_value': 84.7
 },
 
@@ -46,10 +46,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'MAQ_IND_YOY',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'014-022 добыча полезных ископаемых.xls',
  'subtitle':'В % к соответствующему месяцу предыдущего года',
- 'sheet': None,
+ 'sheet':" к соотв. месяцу",
  'anchor_value': 95.1
 },
 
@@ -57,10 +57,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'MAQ_IND_YTD',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'014-022 добыча полезных ископаемых.xls',
  'subtitle':'В % к соответствующему периоду предыдущего года',
- 'sheet': None,
+ 'sheet':"к соотв. периоду",
  'anchor_value': 95.1
 },
 
@@ -68,10 +68,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'MAQ_IND_ROG',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'014-022 добыча полезных ископаемых.xls',
  'subtitle':'В % к предыдущему месяцу',
- 'sheet': None,
+ 'sheet':"к пред. месяцу",
  'anchor_value': 97.1
 },
 
@@ -83,10 +83,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'MAN_IND_YOY',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'023-031 обрабатывающие производства.xls',
  'subtitle':'В % к соответствующему месяцу предыдущего года',
- 'sheet': None,
+ 'sheet':" к соотв. месяцу",
  'anchor_value': 71.9
 },
 
@@ -94,10 +94,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'MAN_IND_YTD',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'023-031 обрабатывающие производства.xls',
  'subtitle':'В % к соответствующему периоду предыдущего года',
- 'sheet': None,
+ 'sheet':"к соотв. периоду",
  'anchor_value': 71.9
 },
 
@@ -105,10 +105,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'MAN_IND_ROG',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'023-031 обрабатывающие производства.xls',
  'subtitle':'В % к предыдущему месяцу',
- 'sheet': None,
+ 'sheet':"к пред. месяцу",
  'anchor_value': 72.7
 },
 
@@ -120,10 +120,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'EGW_IND_YOY',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'032-040 производство и распределение электроэнергии.xls',
  'subtitle':'В % к соответствующему месяцу предыдущего года',
- 'sheet': None,
+ 'sheet':" к соотв. месяцу",
  'anchor_value': 92.5
 },
 
@@ -131,10 +131,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'EGW_IND_YTD',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'032-040 производство и распределение электроэнергии.xls',
  'subtitle':'В % к соответствующему периоду предыдущего года',
- 'sheet': None,
+ 'sheet':"к соотв. периоду",
  'anchor_value': 92.5
 },
 
@@ -142,10 +142,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'EGW_IND_ROG',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'032-040 производство и распределение электроэнергии.xls',
  'subtitle':'В % к предыдущему месяцу',
- 'sheet': None,
+ 'sheet':"к пред. месяцу",
  'anchor_value': 100.3
 },
 
@@ -157,10 +157,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "январь")
 {
  'varname':'PROD_SHIP_MLN_RUB',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'041-043 отгрузка товаров.xls',
  'subtitle':'Млн. рублей',
- 'sheet': None,
+ 'sheet':"Млн.рублей",
  'anchor_value': 2302250.8
 },
 
@@ -172,10 +172,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "январь")
 {
  'varname':'FISH_SHIP_MLN_RUB',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'044-046 отгрузка-Рыболовство, рыбоводство.xls',
  'subtitle':'Млн. рублей',
- 'sheet': None,
+ 'sheet':"Млн.рублей",
  'anchor_value': 4481.2
 },
 
@@ -187,10 +187,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "январь")
 {
  'varname':'FISH_FRESH_IND_YOY',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'047-049 рыба живая, свежая или охлажденная.xls',
  'subtitle':'В % к соответствующему месяцу предыдущего года',
- 'sheet': None,
+ 'sheet':" к соотв. месяцу",
  'anchor_value': 149.4
 },
 
@@ -202,10 +202,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "январь")
 {
  'varname':'FISH_PROC_IND_YOY',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'050-052 рыба и продукты рыбные переработанные.xls',
  'subtitle':'В % к соответствующему месяцу предыдущего года',
- 'sheet': None,
+ 'sheet':" к соотв. месяцу",
  'anchor_value': 119.3
 },
 
@@ -217,10 +217,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2,3", above "январь")
 {
  'varname':'ELECTR_VOL_MLN_KWT',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'053-064 производство электроэнергии заполнен.xls',
  'subtitle':'Млн. кВт?ч',
- 'sheet': None,
+ 'sheet':"Млн. кВт?ч",
  'anchor_value': 102634.6
 },
 
@@ -228,10 +228,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1,2", above "январь")
 {
  'varname':'ELECTR_IND_YOY',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'053-064 производство электроэнергии заполнен.xls',
  'subtitle':'В % к соответствующему месяцу предыдущего года',
- 'sheet': None,
+ 'sheet':" к соотв. месяцу",
  'anchor_value': 107.3
 },
 
@@ -239,10 +239,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1,2", above "январь")
 {
  'varname':'ELECTR_IND_YTD',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'053-064 производство электроэнергии заполнен.xls',
  'subtitle':'В % к соответствующему периоду предыдущего года',
- 'sheet': None,
+ 'sheet':"к соотв. периоду",
  'anchor_value': 107.3
 },
 
@@ -250,10 +250,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация1,2", above "январь")
 {
  'varname':'ELECTR_IND_ROG',
- 'folder':'01 промышленность', 
+ 'folder':'01 промышленность',
  'filename':'053-064 производство электроэнергии заполнен.xls',
  'subtitle':'                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         В % к предыдущему месяцу                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ',
- 'sheet': None,
+ 'sheet':"к пред. месяцу",
  'anchor_value': 101.4
 },
 
@@ -265,10 +265,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "I                    квартал")
 {
  'varname':'AGR_IND_YTD',
- 'folder':'02 сельское хозяйство', 
+ 'folder':'02 сельское хозяйство',
  'filename':'065-070 Индексы сельского хозяйства.xls',
  'subtitle':'В % к соответствующему периоду предыдущего года',
- 'sheet': None,
+ 'sheet':"квартальная",
  'anchor_value': 102.2
 },
 
@@ -276,10 +276,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "I                         квартал")
 {
  'varname':'AGR_IND_YTD',
- 'folder':'02 сельское хозяйство', 
+ 'folder':'02 сельское хозяйство',
  'filename':'065-070 Индексы сельского хозяйства.xls',
  'subtitle':'В % к соответствующему периоду предыдущего года',
- 'sheet': None,
+ 'sheet':"нарастающим итогом",
  'anchor_value': 102.2
 },
 
@@ -291,10 +291,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'CONSTR_VAL_MLN_RUB',
- 'folder':'03 строительство', 
+ 'folder':'03 строительство',
  'filename':'071-082 объем работ, выполненных по ВЭД Строительство.xls',
  'subtitle':'Млн.рублей',
- 'sheet': None,
+ 'sheet':"Млн.рублей",
  'anchor_value': 196765.2
 },
 
@@ -302,10 +302,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'CONSTR_IND_YOY',
- 'folder':'03 строительство', 
+ 'folder':'03 строительство',
  'filename':'071-082 объем работ, выполненных по ВЭД Строительство.xls',
  'subtitle':'В % к соответствующему месяцу предыдущего года',
- 'sheet': None,
+ 'sheet':" к соотв. месяцу",
  'anchor_value': 86.0
 },
 
@@ -313,10 +313,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация1", above "январь")
 {
  'varname':'CONSTR_IND_YTD',
- 'folder':'03 строительство', 
+ 'folder':'03 строительство',
  'filename':'071-082 объем работ, выполненных по ВЭД Строительство.xls',
  'subtitle':'В % к соответствующему периоду предыдущего года',
- 'sheet': None,
+ 'sheet':"к соотв. периоду",
  'anchor_value': 86.0
 },
 
@@ -324,10 +324,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'CONSTR_IND_ROG',
- 'folder':'03 строительство', 
+ 'folder':'03 строительство',
  'filename':'071-082 объем работ, выполненных по ВЭД Строительство.xls',
  'subtitle':'В % к предыдущему месяцу',
- 'sheet': None,
+ 'sheet':"к пред. месяцу",
  'anchor_value': 36.0
 },
 
@@ -339,10 +339,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация, млн. кв. метров 1", above "январь")
 {
  'varname':'CONSTR_H_VOL_TH_M2',
- 'folder':'03 строительство', 
+ 'folder':'03 строительство',
  'filename':'083-088 строительство жилых домов.xls',
  'subtitle':'Тыс.кв.метров общей площади',
- 'sheet': None,
+ 'sheet':"Тыс.кв.метров общей площади",
  'anchor_value': 3.1
 },
 
@@ -350,10 +350,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'CONSTR_H_IND_YOY',
- 'folder':'03 строительство', 
+ 'folder':'03 строительство',
  'filename':'083-088 строительство жилых домов.xls',
  'subtitle':'В % к соответствующему периоду предыдущего года',
- 'sheet': None,
+ 'sheet':"к соотв. периоду",
  'anchor_value': 96.1
 },
 
@@ -365,10 +365,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "I       квартал")
 {
  'varname':'TRANSP_C_IND_YOY',
- 'folder':'04 транспорт', 
+ 'folder':'04 транспорт',
  'filename':'089-094 Перевозка грузов и грузооборот.xls',
  'subtitle':'В % к соответствующему периоду предыдущего года',
- 'sheet': None,
+ 'sheet':"перевозки грузов",
  'anchor_value': 81.3
 },
 
@@ -376,10 +376,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1 ", above "I                              квартал")
 {
  'varname':'TRANSP_C_IND_YTD',
- 'folder':'04 транспорт', 
+ 'folder':'04 транспорт',
  'filename':'089-094 Перевозка грузов и грузооборот.xls',
  'subtitle':'В % к соответствующему периоду предыдущего года',
- 'sheet': None,
+ 'sheet':"грузооборот",
  'anchor_value': 88.5
 },
 
@@ -391,10 +391,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация  млрд. рублей ?", above "январь")
 {
  'varname':'TRADE_R_VAL_MLN_RUB',
- 'folder':'05 торговля', 
+ 'folder':'05 торговля',
  'filename':'095-106 оборот розничной торговли.xls',
  'subtitle':'Млн. рублей',
- 'sheet': None,
+ 'sheet':"Млн. рублей",
  'anchor_value': 1103.1
 },
 
@@ -402,10 +402,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'TRADE_R_IND_YOY',
- 'folder':'05 торговля', 
+ 'folder':'05 торговля',
  'filename':'095-106 оборот розничной торговли.xls',
  'subtitle':'В сопоставимых ценах в % к соответствующему месяцу предыдущего года',
- 'sheet': None,
+ 'sheet':" к соотв. месяцу",
  'anchor_value': 104.7
 },
 
@@ -413,10 +413,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'TRADE_R_IND_YTD',
- 'folder':'05 торговля', 
+ 'folder':'05 торговля',
  'filename':'095-106 оборот розничной торговли.xls',
  'subtitle':'В сопоставимых ценах в % к соответствующему периоду предыдущего года',
- 'sheet': None,
+ 'sheet':"к соотв. периоду",
  'anchor_value': 104.7
 },
 
@@ -424,10 +424,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'TRADE_R_IND_ROG',
- 'folder':'05 торговля', 
+ 'folder':'05 торговля',
  'filename':'095-106 оборот розничной торговли.xls',
  'subtitle':'',
- 'sheet': None,
+ 'sheet':"к пред. месяцу",
  'anchor_value': 74.6
 },
 
@@ -439,10 +439,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация  млрд. рублей ?", above "январь")
 {
  'varname':'TRADE_F_VAL_MLN_RUB',
- 'folder':'05 торговля', 
+ 'folder':'05 торговля',
  'filename':'107-118 оборот розничной торговли пищевыми продуктами.xls',
  'subtitle':'Млн. рублей',
- 'sheet': None,
+ 'sheet':"Млн. рублей",
  'anchor_value': 531.9
 },
 
@@ -450,10 +450,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'TRADE_F_IND_YOY',
- 'folder':'05 торговля', 
+ 'folder':'05 торговля',
  'filename':'107-118 оборот розничной торговли пищевыми продуктами.xls',
  'subtitle':'В сопоставимых ценах в % к соответствующему месяцу предыдущего года',
- 'sheet': None,
+ 'sheet':" к соотв. месяцу",
  'anchor_value': 103.6
 },
 
@@ -461,10 +461,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'TRADE_F_IND_YTD',
- 'folder':'05 торговля', 
+ 'folder':'05 торговля',
  'filename':'107-118 оборот розничной торговли пищевыми продуктами.xls',
  'subtitle':'В сопоставимых ценах в % к соответствующему периоду предыдущего года',
- 'sheet': None,
+ 'sheet':"к соотв. периоду",
  'anchor_value': 103.6
 },
 
@@ -472,10 +472,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'TRADE_F_IND_ROG',
- 'folder':'05 торговля', 
+ 'folder':'05 торговля',
  'filename':'107-118 оборот розничной торговли пищевыми продуктами.xls',
  'subtitle':'В сопоставимых ценах в % к предыдущему месяцу',
- 'sheet': None,
+ 'sheet':"к пред. месяцу",
  'anchor_value': 74.9
 },
 
@@ -487,10 +487,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация  млрд. рублей ?", above "январь")
 {
  'varname':'TRADE_NF_VAL_MLN_RUB',
- 'folder':'05 торговля', 
+ 'folder':'05 торговля',
  'filename':'119-130 оборот розничной торговли непродовольственными.xls',
  'subtitle':'Млн. рублей',
- 'sheet': None,
+ 'sheet':"Млн. рублей",
  'anchor_value': 571.2
 },
 
@@ -498,10 +498,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'TRADE_NF_IND_YOY',
- 'folder':'05 торговля', 
+ 'folder':'05 торговля',
  'filename':'119-130 оборот розничной торговли непродовольственными.xls',
  'subtitle':'В сопоставимых ценах в % к соответствующему месяцу предыдущего года',
- 'sheet': None,
+ 'sheet':" к соотв. месяцу",
  'anchor_value': 105.4
 },
 
@@ -509,10 +509,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'TRADE_NF_IND_YTD',
- 'folder':'05 торговля', 
+ 'folder':'05 торговля',
  'filename':'119-130 оборот розничной торговли непродовольственными.xls',
  'subtitle':'В сопоставимых ценах в % к соответствующему периоду предыдущего года',
- 'sheet': None,
+ 'sheet':"к соотв. периоду",
  'anchor_value': 105.4
 },
 
@@ -520,10 +520,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'TRADE_NF_IND_ROG',
- 'folder':'05 торговля', 
+ 'folder':'05 торговля',
  'filename':'119-130 оборот розничной торговли непродовольственными.xls',
  'subtitle':'В сопоставимых ценах в % к предыдущему месяцу',
- 'sheet': None,
+ 'sheet':"к пред. месяцу",
  'anchor_value': 74.3
 },
 
@@ -535,10 +535,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "I                                                                                              квартал ")
 {
  'varname':'INV_VAL_MLN_RUB',
- 'folder':'07 инвестиции', 
+ 'folder':'07 инвестиции',
  'filename':'155-160 объем инвестиций в основной капитал.xls',
  'subtitle':'За счет всех источников финансирования; млн.рублей',
- 'sheet': None,
+ 'sheet':"млн. рублей",
  'anchor_value': 1224270.0
 },
 
@@ -546,10 +546,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "I                                                    квартал")
 {
  'varname':'INV_IND_YTD',
- 'folder':'07 инвестиции', 
+ 'folder':'07 инвестиции',
  'filename':'155-160 объем инвестиций в основной капитал.xls',
  'subtitle':'За счет всех источников финансирования; в сопоставимых ценах в % к соответствующему периоду предыдущего года',
- 'sheet': None,
+ 'sheet':"к соотв.периоду",
  'anchor_value': 82.0
 },
 
@@ -561,10 +561,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 3", above "январь")
 {
  'varname':'INV_IND_',
- 'folder':'07 инвестиции', 
+ 'folder':'07 инвестиции',
  'filename':'161-163 индекс физ объема инвест в осн капитал.xls',
  'subtitle':'',
- 'sheet': None,
+ 'sheet':"индекс физ. об. инвестиций ",
  'anchor_value': 82.4
 },
 
@@ -576,10 +576,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация, млн. долларов США", above "I                                                                        квартал")
 {
  'varname':'FORINV_VAL_TH_USD',
- 'folder':'08 иностранные ивестиции', 
+ 'folder':'08 иностранные ивестиции',
  'filename':'164-169 иностранные инвестиции.xls',
  'subtitle':'Тыс. долларов США',
- 'sheet': None,
+ 'sheet':"тыс.долларов США",
  'anchor_value': 12031.0
 },
 
@@ -587,10 +587,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация", above "I                                            квартал")
 {
  'varname':'FORINV__',
- 'folder':'08 иностранные ивестиции', 
+ 'folder':'08 иностранные ивестиции',
  'filename':'164-169 иностранные инвестиции.xls',
  'subtitle':'В % к итогу',
- 'sheet': None,
+ 'sheet':"в % к итогу",
  'anchor_value': 100.0
 },
 
@@ -602,10 +602,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2,3", above "январь")
 {
  'varname':'PROFIT_NET_VAL_MLN_RUB',
- 'folder':'09 финансы предприятий', 
+ 'folder':'09 финансы предприятий',
  'filename':'170-175 финансовые результаты.xls',
  'subtitle':'млн.рублей',
- 'sheet': None,
+ 'sheet':"Млн. рублей",
  'anchor_value': -184373.0
 },
 
@@ -613,10 +613,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2,3", above "январь")
 {
  'varname':'PROFIT_NET_IND_YTD',
- 'folder':'09 финансы предприятий', 
+ 'folder':'09 финансы предприятий',
  'filename':'170-175 финансовые результаты.xls',
  'subtitle':'В % к соответствующему периоду предыдущего года 1',
- 'sheet': None,
+ 'sheet':"к соотв. периоду",
  'anchor_value': None},
 
 
@@ -627,10 +627,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'PROFIT_GAIN_VAL_MLN_RUB',
- 'folder':'09 финансы предприятий', 
+ 'folder':'09 финансы предприятий',
  'filename':'176-181 прибыль прибыльных организаций.xls',
  'subtitle':'Млн.рублей',
- 'sheet': None,
+ 'sheet':"Млн.рублей",
  'anchor_value': 517408.0
 },
 
@@ -638,10 +638,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'PROFIT_GAIN_IND_YTD',
- 'folder':'09 финансы предприятий', 
+ 'folder':'09 финансы предприятий',
  'filename':'176-181 прибыль прибыльных организаций.xls',
  'subtitle':'В % к соответствующему периоду предыдущего года ',
- 'sheet': None,
+ 'sheet':"к соот.периоду",
  'anchor_value': 87.0
 },
 
@@ -653,10 +653,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'PROFIT_GAIN_SHARE_PERCENT_TOTAL',
- 'folder':'09 финансы предприятий', 
+ 'folder':'09 финансы предприятий',
  'filename':'182-184 доля прибыльных организаций.xls',
  'subtitle':'В % к общему количеству',
- 'sheet': None,
+ 'sheet':"в % к общему количеству",
  'anchor_value': 61.1
 },
 
@@ -668,10 +668,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'PROFIT_LOSS_SHARE_PERCENT_TOTAL',
- 'folder':'09 финансы предприятий', 
+ 'folder':'09 финансы предприятий',
  'filename':'185-187 доля убыточных организаций.xls',
  'subtitle':'В % к общему количеству',
- 'sheet': None,
+ 'sheet':"в % к общему количеству",
  'anchor_value': 38.9
 },
 
@@ -683,21 +683,21 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1,2", above "январь")
 {
  'varname':'CORP_DEBT_VAL_MLN_RUB',
- 'folder':'09 финансы предприятий', 
+ 'folder':'09 финансы предприятий',
  'filename':'188-193 кредиторская задолженность.xls',
  'subtitle':'На конец месяца, млн. рублей',
- 'sheet': None,
+ 'sheet':"Млн. рублей",
  'anchor_value': 13201313.0
 },
 
 # Sheet name: "просроченная кр.задолж."
 # Debugging.  left:"Российская Федерация 1,2", above "январь")
 {
- 'varname':'Profit_54', 
+ 'varname':'Profit_54',
  'varname':'CORP_DEBT_OVD_VAL_MLN_RUB',
  'filename':'188-193 кредиторская задолженность.xls',
  'subtitle':'В том числе объем просроченной кредиторской задолженности',
- 'sheet': None,
+ 'sheet':"просроченная кр.задолж.",
  'anchor_value': 1031919.0
 },
 
@@ -709,10 +709,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1,2", above "январь")
 {
  'varname':'CORP_RECIV_VAL_MLN_RUB',
- 'folder':'09 финансы предприятий', 
+ 'folder':'09 финансы предприятий',
  'filename':'194-199 дебиторская задолженность.xls',
  'subtitle':'На конец месяца, млн.рублей',
- 'sheet': None,
+ 'sheet':"Млн. рублей",
  'anchor_value': 13659920.0
 },
 
@@ -720,10 +720,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1,2", above "январь")
 {
  'varname':'CORP_RECIV_OVD_VAL_MLN_RUB',
- 'folder':'09 финансы предприятий', 
+ 'folder':'09 финансы предприятий',
  'filename':'194-199 дебиторская задолженность.xls',
  'subtitle':'В том числе объем просроченной дебиторской задолженности',
- 'sheet': None,
+ 'sheet':"просроченная дебит.задолж.",
  'anchor_value': 1142211.0
 },
 
@@ -735,10 +735,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'CPI_IND_YTD',
- 'folder':'10 потребительские цены', 
+ 'folder':'10 потребительские цены',
  'filename':'200-202 цены на товары и услуги.xls',
  'subtitle':'В % к декабрю предыдущего года',
- 'sheet': None,
+ 'sheet':"в % к декабрю пред.года",
  'anchor_value': 102.4
 },
 
@@ -750,10 +750,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'CPI_FOOD_IND_YTD',
- 'folder':'10 потребительские цены', 
+ 'folder':'10 потребительские цены',
  'filename':'203-205 цены на продовольственные товары.xls',
  'subtitle':'В % к декабрю предыдущего года',
- 'sheet': None,
+ 'sheet':"в % к декабрю пред.года",
  'anchor_value': 101.4
 },
 
@@ -765,10 +765,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'CPI_NFOOD_IND_YTD',
- 'folder':'10 потребительские цены', 
+ 'folder':'10 потребительские цены',
  'filename':'206-208 цены на непродовольственные товары.xls',
  'subtitle':'В % к декабрю предыдущего года',
- 'sheet': None,
+ 'sheet':"в % к декабрю пред.года",
  'anchor_value': 100.7
 },
 
@@ -780,10 +780,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'CPI_SERV_IND_YTD',
- 'folder':'10 потребительские цены', 
+ 'folder':'10 потребительские цены',
  'filename':'209-211 цены на услуги.xls',
  'subtitle':'В % к декабрю предыдущего года',
- 'sheet': None,
+ 'sheet':"в % к декабрю пред.года",
  'anchor_value': 106.3
 },
 
@@ -795,10 +795,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'CPI_SERV_HOUS_IND_YTD',
- 'folder':'10 потребительские цены', 
+ 'folder':'10 потребительские цены',
  'filename':'212-223 цены на отдельные ЖКХ .xls',
  'subtitle':'Всего; в % к декабрю предыдущего года',
- 'sheet': None,
+ 'sheet':"Всего",
  'anchor_value': 114.4
 },
 
@@ -806,10 +806,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'CPI_SERV_HEAT_IND_YTD',
- 'folder':'10 потребительские цены', 
+ 'folder':'10 потребительские цены',
  'filename':'212-223 цены на отдельные ЖКХ .xls',
  'subtitle':'Отопление; в % к декабрю предыдущего года',
- 'sheet': None,
+ 'sheet':"Отопление",
  'anchor_value': 115.5
 },
 
@@ -817,10 +817,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'CPI_SERV_HWATER_IND_YTD',
- 'folder':'10 потребительские цены', 
+ 'folder':'10 потребительские цены',
  'filename':'212-223 цены на отдельные ЖКХ .xls',
  'subtitle':'Горячее водоснабжение; в % к декабрю предыдущего года',
- 'sheet': None,
+ 'sheet':"Горячее водоснабжение",
  'anchor_value': 118.0
 },
 
@@ -828,10 +828,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'CPI_SERV_CWATER_IND_YTD',
- 'folder':'10 потребительские цены', 
+ 'folder':'10 потребительские цены',
  'filename':'212-223 цены на отдельные ЖКХ .xls',
  'subtitle':'Холодное водоснабжение и водоотведение; в % к декабрю предыдущего года',
- 'sheet': None,
+ 'sheet':"Хол.водоснабжение и водоотвед",
  'anchor_value': 118.1
 },
 
@@ -843,10 +843,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'CPI_BASKET_VAL_RUB',
- 'folder':'10 потребительские цены', 
+ 'folder':'10 потребительские цены',
  'filename':'224-226 фиксированный набор.xls',
  'subtitle':'на конец периода; рублей',
- 'sheet': None,
+ 'sheet':"на конец периода",
  'anchor_value': 7292.0
 },
 
@@ -858,10 +858,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'PPI_AGR_IND_YTD',
- 'folder':'11 цены производителей', 
+ 'folder':'11 цены производителей',
  'filename':'230-232 индексы цен производителей на реализованную сельскохозяйственн продукцию.xls',
  'subtitle':'В % к декабрю предыдущего года',
- 'sheet': None,
+ 'sheet':"сельск.продукция",
  'anchor_value': 99.5
 },
 
@@ -873,10 +873,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'PPI_TRANSP_C_IND_YTD',
- 'folder':'11 цены производителей', 
+ 'folder':'11 цены производителей',
  'filename':'236-238 индексы цен (тарифов) на грузовые перевозки.xls',
  'subtitle':'В % к декабрю предыдущего года',
- 'sheet': None,
+ 'sheet':"грузовые перевозки",
  'anchor_value': 102.8
 },
 
@@ -888,10 +888,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "I      квартал")
 {
  'varname':'PPI_DWELINGS_VAL_RUB_M2',
- 'folder':'11 цены производителей', 
+ 'folder':'11 цены производителей',
  'filename':'239-244 цены на первичном и вторичном рынках жилья.xls',
  'subtitle':'На конец квартала, рублей за 1 кв. метр общей площади',
- 'sheet': None,
+ 'sheet':"первичный рынок",
  'anchor_value': 50465.0
 },
 
@@ -899,10 +899,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "I      квартал")
 {
  'varname':'PPI_DWELINGS_VAL_RUB_M2',
- 'folder':'11 цены производителей', 
+ 'folder':'11 цены производителей',
  'filename':'239-244 цены на первичном и вторичном рынках жилья.xls',
  'subtitle':'На конец квартала, рублей за 1 кв. метр общей площади',
- 'sheet': None,
+ 'sheet':"вторичный рынок",
  'anchor_value': 57806.0
 },
 
@@ -914,10 +914,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "январь")
 {
  'varname':'INCOME_PERCAP_VAL_RUB',
- 'folder':'12 доходы', 
+ 'folder':'12 доходы',
  'filename':'245-250 среднедушевые денежные доходы.xls',
  'subtitle':'Рублей',
- 'sheet': None,
+ 'sheet':"рублей",
  'anchor_value': 11254.1
 },
 
@@ -925,10 +925,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "январь")
 {
  'varname':'INCOME_PERCAP_IND_YOY',
- 'folder':'12 доходы', 
+ 'folder':'12 доходы',
  'filename':'245-250 среднедушевые денежные доходы.xls',
  'subtitle':'В % к соответствующему месяцу предыдущего года ',
- 'sheet': None,
+ 'sheet':"к соотв. месяцу",
  'anchor_value': 107.9
 },
 
@@ -940,10 +940,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "январь")
 {
  'varname':'INCOME_REAL_IND_YOY',
- 'folder':'12 доходы', 
+ 'folder':'12 доходы',
  'filename':'251-256 реальные денежные доходы.xls',
  'subtitle':'В % к соответствующему месяцу предыдущего года',
- 'sheet': None,
+ 'sheet':"к соотв. месяцу",
  'anchor_value': 95.2
 },
 
@@ -951,10 +951,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "январь-февраль")
 {
  'varname':'INCOME_REAL_IND_YTD',
- 'folder':'12 доходы', 
+ 'folder':'12 доходы',
  'filename':'251-256 реальные денежные доходы.xls',
  'subtitle':'В  % к соответствующему периоду предыдущего года',
- 'sheet': None,
+ 'sheet':"к соотв. периоду",
  'anchor_value': 99.3
 },
 
@@ -966,10 +966,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'WAGE_VAL_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'257-265 среднемесячная заработная плата.xls',
  'subtitle':'Рублей',
- 'sheet': None,
+ 'sheet':"рублей",
  'anchor_value': 17118.7
 },
 
@@ -977,10 +977,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1 ", above "январь")
 {
  'varname':'WAGE_IND_ROG',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'257-265 среднемесячная заработная плата.xls',
  'subtitle':'В %  к предыдущему месяцу ',
- 'sheet': None,
+ 'sheet':"к пред.месяцу",
  'anchor_value': 79.0
 },
 
@@ -988,10 +988,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'WAGE_IND_YOY',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'257-265 среднемесячная заработная плата.xls',
  'subtitle':'В % к соответствующему месяцу предыдущего года',
- 'sheet': None,
+ 'sheet':"к соотв. месяцу",
  'anchor_value': 115.5
 },
 
@@ -1003,10 +1003,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "январь")
 {
  'varname':'WAGE_AGR_VAL_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'266-271 среднемесячная заработная плата работников сельского хозяйства.xls',
  'subtitle':'Рублей',
- 'sheet': None,
+ 'sheet':"рублей",
  'anchor_value': 8533.3
 },
 
@@ -1014,10 +1014,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "январь")
 {
  'varname':'WAGE_AGR_IND_YOY',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'266-271 среднемесячная заработная плата работников сельского хозяйства.xls',
  'subtitle':'В % к соответствующему месяцу предыдущего года',
- 'sheet': None,
+ 'sheet':"к соотв. месяцу",
  'anchor_value': 123.0
 },
 
@@ -1029,10 +1029,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1 января")
 {
  'varname':'WAGE_OVD_VAL_TH_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'272-280 просроченная задолженность по заработной плате.xls',
  'subtitle':'Всего; тыс. рублей',
- 'sheet': None,
+ 'sheet':"всего ",
  'anchor_value': 4673732.0
 },
 
@@ -1040,10 +1040,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1 января")
 {
  'varname':'WAGE_OVD_BUDGET_VAL_TH_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'272-280 просроченная задолженность по заработной плате.xls',
  'subtitle':'Из нее из-за  несвоевременного получения денежных средств из бюджетов всех уровней; тыс. рублей',
- 'sheet': None,
+ 'sheet':"несвоесременное получ. из бюдж",
  'anchor_value': 260672.0
 },
 
@@ -1051,10 +1051,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1                                        января")
 {
  'varname':'WAGE_OVD_REPORT_VAL_TH_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'272-280 просроченная задолженность по заработной плате.xls',
  'subtitle':'находящимся в стадии конкурсного производства и представивших сведения, тыс. рублей',
- 'sheet': None,
+ 'sheet':"задолженность по организациям",
  'anchor_value': 953550.0
 },
 
@@ -1066,10 +1066,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1 января")
 {
  'varname':'WAGE_OVD_AGR_VAL_TH_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'281-319 просроченная задолженность по заработной  плате по ВЭД.xls',
  'subtitle':'Сельское хозяйство, охота и лесозаготовки; тыс.рублей',
- 'sheet': None,
+ 'sheet':"Сельское хозяйство",
  'anchor_value': 538963.0
 },
 
@@ -1077,10 +1077,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1 января")
 {
  'varname':'WAGE_OVD_FISH_VAL_TH_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'281-319 просроченная задолженность по заработной  плате по ВЭД.xls',
  'subtitle':'Рыболовство, рыбоводство; тыс.рублей',
- 'sheet': None,
+ 'sheet':"Рыболовство, рыбоводство",
  'anchor_value': 7231.0
 },
 
@@ -1088,10 +1088,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1 января")
 {
  'varname':'WAGE_OVD_MAQ_VAL_TH_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'281-319 просроченная задолженность по заработной  плате по ВЭД.xls',
  'subtitle':'Добыча полезных ископаемых; тыс.рублей',
- 'sheet': None,
+ 'sheet':"Добыча полезных ископаемых",
  'anchor_value': 275180.0
 },
 
@@ -1099,10 +1099,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1 января")
 {
  'varname':'WAGE_OVD_MAN_VAL_TH_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'281-319 просроченная задолженность по заработной  плате по ВЭД.xls',
  'subtitle':'Обрабатывающие производства; тыс.рублей',
- 'sheet': None,
+ 'sheet':"Обрабатывающие производства",
  'anchor_value': 1839356.0
 },
 
@@ -1110,10 +1110,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1 января")
 {
  'varname':'WAGE_OVD_EGW_VAL_TH_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'281-319 просроченная задолженность по заработной  плате по ВЭД.xls',
  'subtitle':'Производство и распределение электроэнергии, газа и воды; тыс.рублей',
- 'sheet': None,
+ 'sheet':"Произ-во и распр.электроэн.",
  'anchor_value': 294921.0
 },
 
@@ -1121,10 +1121,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1 января")
 {
  'varname':'WAGE_OVD_CONSTR_VAL_TH_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'281-319 просроченная задолженность по заработной  плате по ВЭД.xls',
  'subtitle':'Строительство; тыс.рублей',
- 'sheet': None,
+ 'sheet':"Строительство",
  'anchor_value': 518295.0
 },
 
@@ -1132,10 +1132,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1 января")
 {
  'varname':'WAGE_OVD_TRANSP_VAL_TH_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'281-319 просроченная задолженность по заработной  плате по ВЭД.xls',
  'subtitle':'Транспорт; тыс.рублей',
- 'sheet': None,
+ 'sheet':"Транспорт",
  'anchor_value': 859674.0
 },
 
@@ -1143,10 +1143,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1 января")
 {
  'varname':'WAGE_OVD_REALT_VAL_TH_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'281-319 просроченная задолженность по заработной  плате по ВЭД.xls',
  'subtitle':'Управление недвижимым имуществом; тыс.рублей',
- 'sheet': None,
+ 'sheet':"Управ.недвиж.имуществом",
  'anchor_value': 67282.0
 },
 
@@ -1154,10 +1154,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1 января")
 {
  'varname':'WAGE_OVD_RAD_VAL_TH_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'281-319 просроченная задолженность по заработной  плате по ВЭД.xls',
  'subtitle':'Научные исследования и разработки; тыс.рублей',
- 'sheet': None,
+ 'sheet':"Науч.исследов. и разраб.",
  'anchor_value': 188020.0
 },
 
@@ -1165,10 +1165,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1 января")
 {
  'varname':'WAGE_OVD_EDU_VAL_TH_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'281-319 просроченная задолженность по заработной  плате по ВЭД.xls',
  'subtitle':'Образование; тыс.рублей',
- 'sheet': None,
+ 'sheet':"Образование",
  'anchor_value': 43924.0
 },
 
@@ -1176,10 +1176,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1 января")
 {
  'varname':'WAGE_OVD_HEALTH_VAL_TH_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'281-319 просроченная задолженность по заработной  плате по ВЭД.xls',
  'subtitle':'Здравоохранение и предоставление социальных услуг; тыс.рублей',
- 'sheet': None,
+ 'sheet':"Здравоохранение",
  'anchor_value': 26451.0
 },
 
@@ -1187,10 +1187,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1 января")
 {
  'varname':'WAGE_OVD_COMMUNAL_VAL_TH_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'281-319 просроченная задолженность по заработной  плате по ВЭД.xls',
  'subtitle':'Сбор сточных вод, отходов и аналогичная деятельность; тыс.рублей',
- 'sheet': None,
+ 'sheet':"сбор сточных  вод",
  'anchor_value': 11120.0
 },
 
@@ -1198,10 +1198,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1 января")
 {
  'varname':'WAGE_OVD_ART_VAL_TH_RUB',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'281-319 просроченная задолженность по заработной  плате по ВЭД.xls',
  'subtitle':'Деятельность в области культуры; тыс.рублей',
- 'sheet': None,
+ 'sheet':"Культура",
  'anchor_value': 3315.0
 },
 
@@ -1213,10 +1213,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 1", above "на 1 января")
 {
  'varname':'EMPL_NUM_PERS',
- 'folder':'13 зарплата', 
+ 'folder':'13 зарплата',
  'filename':'320-322 численность работников.xls',
  'subtitle':'человек',
- 'sheet': None,
+ 'sheet':"всего ",
  'anchor_value': 322994.0
 },
 
@@ -1228,10 +1228,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 3 ", above "январь")
 {
  'varname':'EMPL_QUIT_NUM_TH',
- 'folder':'15 рынок труда', 
+ 'folder':'15 рынок труда',
  'filename':'329-340 выбывшие из организаций.xls',
  'subtitle':'Всего; тыс. человек',
- 'sheet': None,
+ 'sheet':"всего",
  'anchor_value': 424.0
 },
 
@@ -1239,10 +1239,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "январь")
 {
  'varname':'EMPL_QUIT_EGREEM_NUM_TH',
- 'folder':'15 рынок труда', 
+ 'folder':'15 рынок труда',
  'filename':'329-340 выбывшие из организаций.xls',
  'subtitle':'В том числе: по соглашению сторон; тыс. человек',
- 'sheet': None,
+ 'sheet':"по соглашению сторон",
  'anchor_value': 50.5
 },
 
@@ -1250,10 +1250,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "январь")
 {
  'varname':'EMPL_QUIT_FIRED_NUM_TH',
- 'folder':'15 рынок труда', 
+ 'folder':'15 рынок труда',
  'filename':'329-340 выбывшие из организаций.xls',
  'subtitle':'В том числе: в связи с сокращением численности работников;  тыс. человек',
- 'sheet': None,
+ 'sheet':"по сокращению численности ",
  'anchor_value': 34.2
 },
 
@@ -1261,10 +1261,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "январь")
 {
  'varname':'EMPL_QUIT_VOLUNTARY_NUM_TH',
- 'folder':'15 рынок труда', 
+ 'folder':'15 рынок труда',
  'filename':'329-340 выбывшие из организаций.xls',
  'subtitle':' В том числе:  по собственному желанию; тыс. человек',
- 'sheet': None,
+ 'sheet':"по собственному желанию",
  'anchor_value': 260.3
 },
 
@@ -1276,10 +1276,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 3", above "январь")
 {
  'varname':'EMPL_HIRE_NUM_TH',
- 'folder':'15 рынок труда', 
+ 'folder':'15 рынок труда',
  'filename':'341-346 принятые в организации.xls',
  'subtitle':'Всего, тыс. человек',
- 'sheet': None,
+ 'sheet':"всего",
  'anchor_value': 281.6
 },
 
@@ -1287,10 +1287,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "январь")
 {
  'varname':'EMPL_HIRE_NEW_PLACE_NUM_TH',
- 'folder':'15 рынок труда', 
+ 'folder':'15 рынок труда',
  'filename':'341-346 принятые в организации.xls',
  'subtitle':'В том числе: на дополнительно введенные рабочие места, тыс. человек',
- 'sheet': None,
+ 'sheet':"допол.введенные раб.места",
  'anchor_value': 25.1
 },
 
@@ -1302,10 +1302,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 3", above "январь")
 {
  'varname':'EMPL_PLAN_FIRE_NUM_TH',
- 'folder':'15 рынок труда', 
+ 'folder':'15 рынок труда',
  'filename':'347-349 намеченные к высвобождению.xls',
  'subtitle':'Тыс. человек',
- 'sheet': None,
+ 'sheet':"тыс.человек",
  'anchor_value': 61.1
 },
 
@@ -1317,10 +1317,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 3", above "январь")
 {
  'varname':'EMPL_VACANCY_NUM_TH',
- 'folder':'15 рынок труда', 
+ 'folder':'15 рынок труда',
  'filename':'350-352 требуемые работники.xls',
  'subtitle':' На конец отчетного периода, тыс. человек',
- 'sheet': None,
+ 'sheet':"тыс.человек",
  'anchor_value': 329.9
 },
 
@@ -1332,10 +1332,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 3", above "январь")
 {
  'varname':'EMPL_PARTTIME_FORCED_NUM_TH',
- 'folder':'15 рынок труда', 
+ 'folder':'15 рынок труда',
  'filename':'353-364 работавшие неполное рабочее время.xls',
  'subtitle':'Работали неполное рабочее время по инициативе работодателя; тыс. человек',
- 'sheet': None,
+ 'sheet':"по инициативе работодателя",
  'anchor_value': 825.9
 },
 
@@ -1343,10 +1343,10 @@ definitions=[
 # Debugging.  left:"378.0", above "январь")
 {
  'varname':'EMPL_PARTTIME_NUM_TH',
- 'folder':'15 рынок труда', 
+ 'folder':'15 рынок труда',
  'filename':'353-364 работавшие неполное рабочее время.xls',
  'subtitle':'',
- 'sheet': None,
+ 'sheet':"соглашения ",
  'anchor_value': 309.1
 },
 
@@ -1354,10 +1354,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 3", above "январь")
 {
  'varname':'EMPL_LOSTTIME_NUM_TH',
- 'folder':'15 рынок труда', 
+ 'folder':'15 рынок труда',
  'filename':'353-364 работавшие неполное рабочее время.xls',
  'subtitle':'Находились в простое по вине работодателя и по причинам, не зависящим от работодателя и работника1; тыс. человек  ',
- 'sheet': None,
+ 'sheet':"простои",
  'anchor_value': 201.8
 },
 
@@ -1365,10 +1365,10 @@ definitions=[
 # Debugging.  left:"Российская Федерация 2", above "январь")
 {
  'varname':'EMPL_PARTTIME_NOPAY_NUM_TH',
- 'folder':'15 рынок труда', 
+ 'folder':'15 рынок труда',
  'filename':'353-364 работавшие неполное рабочее время.xls',
  'subtitle':'Имели отпуска без сохранения заработной платы по заявлению работника; тыс. человек',
- 'sheet': None,
+ 'sheet':"отпуск без сохр.сохран.з.п.",
  'anchor_value': 1106.4
 },
 

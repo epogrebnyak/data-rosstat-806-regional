@@ -4,8 +4,8 @@ import os
 import pandas as pd
 from definitions import definitions 
 from getter import get_dataframe_by_definition as get_df
-from config import ROOT_DATA_FOLDER, OUTPUT_XLS_1 
-
+from config import ROOT_DATA_FOLDER, OUTPUT_XLS 
+from regions import Regions
 
 def get_var_desc(def_dict):
     vn = def_dict['filename'].replace("-","").replace(".xls","").strip('0123456789').strip()
@@ -19,8 +19,8 @@ def get_varname_df(defs = definitions):
     
 def write_to_xl(df_list, file):
     with pd.ExcelWriter(file) as writer:
-        # HELP NEEDED 2: if uncommented, this (1) affects formatting of following sheets (1st column not formatted as dates)     
-        #                                     (2) causes 'out of memory' warnings when opening file  
+        # WARNING: if uncommented, this (1) affects formatting of following sheets (1st column not formatted as dates)     
+        #                               (2) causes 'out of memory' warnings when opening file  
         # get_varname_df().to_excel(writer, sheet_name='varnames')        
         for df in df_list:
             sn = df['varname'][0]
@@ -35,14 +35,30 @@ for i, d in enumerate(definitions):
 
 # main import 
 dfs = [get_df(d) for d in definitions]
-       
-#save all dataframes to xl
-write_to_xl(dfs, file = OUTPUT_XLS_1)
 
-# TODO:
-# make Russia file (1 sheet)
-# make fed districts file (num_var sheets)
-# make regions file (num_var sheets)
+if __name___ == "__main__":
+        
+    # output 1: save all dataframes to xl
+    write_to_xl(dfs, file = OUTPUT_XLS['full'])
+
+    # TODO:
+    # output 2: make Russia file (1 sheet)
+    Regions.rf_name()
+    # take rf from each df
+    # rename by varname    
+    # add to rf dataframe
+    # dump rf dataframe
+    
+    # output 3: make fed districts file (num_var sheets)
+    Regions.district_names() 
+
+    
+    # output 4: make regions only file (num_var sheets)
+    Regions.summable_regions()
+    
+    # output 5: write regions only file (num_var sheets)
+    write_to_xl([get_varname_df()], file = OUTPUT_XLS['varnames'])
+
 
 # HELP NEEDED 1:
 # format all sheets *rosstat_806_regional.xls* as *formatting_rosstat_806_regional.xls*:

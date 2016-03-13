@@ -8,11 +8,13 @@ Wrapper class for:
 
 Usage:
     import Regions
+    Regions.filter_region_name(raw_region_name:str)
+    
     Regions.district_names()  # == district_names, all  methods are classmethods, no instanse is needed
     Regions.summable_regions()  # == summable_regions
-    Regions.filter_region_name(raw_region_name:str)
     Regions.rf_name()
     Regions.names() # == reference_region_names
+    
     Regions.sorted_names()
     Regions.code_table()
         ('Белгородская область', '14', 'RU-BEL')

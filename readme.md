@@ -1,4 +1,4 @@
-##DONE
+﻿##DONE
 
 - this be moved to 'abandoned':
   - r_codes.csv
@@ -10,6 +10,10 @@
 ##TODO
 
 - generate final files 
+- import many definitions 
+- write all sheets to one file (output 1) + each sheet contains same as original sheet 
+- write concat all dataframes and write to one file (output 2): 2.1 regions, 2.2. districts, 2.3 russia total
+- exectable script to update output 1 and output 2
 
 ##MAYDO
 
@@ -20,17 +24,11 @@
 ##NOT TODO
 
 - translit filenames names instead of PROFIT https://github.com/epogrebnyak/rosstat-806-regional/blob/master/make_definitions.py#L91-L96
-
 - todos in https://github.com/epogrebnyak/rosstat-806-regional/blob/master/make_definitions.py
   -  can code be split into several fucntions as suggested?
   -  other small todos
   -  maybe add dictionary with translit 
 
-- write varname in function 
-- import many definitions 
-- write all sheets to one file (output 1) + each sheet contains same as original sheet 
-- write concat all dataframes and write to one file (output 2): 2.1 regions, 2.2. districts, 2.3 russia total
-- exectable script to update output 1 and output 2
 
 ## Source URL
 <http://www.gks.ru/wps/wcm/connect/rosstat_main/rosstat/ru/statistics/publications/catalog/doc_1246601078438>
