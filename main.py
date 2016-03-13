@@ -19,8 +19,8 @@ def get_varname_df(defs = definitions):
     
 def write_to_xl(df_list, file):
     with pd.ExcelWriter(file) as writer:
-        # HELP NEEDED 2: if uncommented, this (1) affects formatting of following sheet     
-        #                                   (2) causes 'out of memory' warnings when opening file  
+        # HELP NEEDED 2: if uncommented, this (1) affects formatting of following sheets (1st column not formatted as dates)     
+        #                                     (2) causes 'out of memory' warnings when opening file  
         # get_varname_df().to_excel(writer, sheet_name='varnames')        
         for df in df_list:
             sn = df['varname'][0]
