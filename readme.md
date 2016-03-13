@@ -1,36 +1,16 @@
-﻿##DONE
+﻿## Файлы Excel
+Файлы Excel c данными находятся в папке [xls/output](xls/output)
 
-- this be moved to 'abandoned':
-  - r_codes.csv
-  - regions.py
-
-
-- one test.py file
-
-##TODO
-
-- generate final files 
-- import many definitions 
-- write all sheets to one file (output 1) + each sheet contains same as original sheet 
-- write concat all dataframes and write to one file (output 2): 2.1 regions, 2.2. districts, 2.3 russia total
-- exectable script to update output 1 and output 2
-
-##MAYDO
-
-3. Write def _function() instead of lambda in https://github.com/epogrebnyak/rosstat-806-regional/blob/master/class_regions.py#L239
-- summation test in https://github.com/epogrebnyak/rosstat-806-regional/blob/master/getter.py
+На настоящий момент из-за нестандартного представления данных не импортируются:
+- [ ] ```065-070 Индексы сельского хозяйства.xls```
+- [ ] ```155-160 объем инвестиций в основной капитал.xls```
+- [ ] ```161-163 индекс физ объема инвест в осн капитал.xls```
+- [ ] ```164-169 иностранные инвестиции.xls```
+- [ ] ```272-280 просроченная задолженность по заработной плате.xls```
 
 
-##NOT TODO
 
-- translit filenames names instead of PROFIT https://github.com/epogrebnyak/rosstat-806-regional/blob/master/make_definitions.py#L91-L96
-- todos in https://github.com/epogrebnyak/rosstat-806-regional/blob/master/make_definitions.py
-  -  can code be split into several fucntions as suggested?
-  -  other small todos
-  -  maybe add dictionary with translit 
-
-
-## Source URL
+## Исходный URL
 <http://www.gks.ru/wps/wcm/connect/rosstat_main/rosstat/ru/statistics/publications/catalog/doc_1246601078438>
 
 ### Информация для ведения мониторинга социально-экономического положения субъектов Российской Федерации
