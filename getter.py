@@ -15,9 +15,9 @@ def get_dataframe(datapoints_stream):
     """Return dataframe corresponding to datapoints stream."""        
     list_of_dicts = [{'val':x[0], 'region':x[1], 'dates':x[2]} for x in datapoints_stream]
     df = pd.DataFrame(list_of_dicts)
-    # note: may also need to change index class to DateIndex 
-    # pd.DatetimeIndex(df.dates, freq = "M")
-    return df.pivot(columns='region', values='val', index='dates')[reference_region_names] 
+    df = df.pivot(columns='region', values='val', index='dates')[reference_region_names]
+    df.index = pd.DatetimeIndex(df.index)
+    return df
 
 def get_dataframe_by_definition(def_dict):
     """Return dataframe corresponding to definition dict."""   
@@ -53,8 +53,10 @@ def to_excel(def_dict):
     
 if __name__ == "__main__":
 
+    from config import XL_SAMPLE_FOLDER
+
     def_dict_1 = {'varname':'PPI_PROM_ytd', 
-     'folder':'xl_sample', 
+     'folder': XL_SAMPLE_FOLDER, 
    'filename':'industrial_prices.xls',
       'sheet':'пром.товаров',
      'anchor':'B5', 'anchor_value': 96.6}
@@ -64,7 +66,7 @@ if __name__ == "__main__":
     
     # make definition for shipments.xls + tests below      
     def_dict_2 = {'varname':'SHIPMENTS', 
-     'folder':'xl_sample', 
+     'folder': XL_SAMPLE_FOLDER, 
    'filename':'shipment.xls',
       'sheet':'Млн.рублей',
      'anchor':'B6', 'anchor_value': 5331853.711}     
@@ -78,11 +80,24 @@ if __name__ == "__main__":
 # tests to pass:
 # 3.1 for summable values summ by regions equals Russian Federation total 
     p = abs(reg.sum(axis = 1) - rf)
+    # QUESTION:
+    print("\nSummable regions do not match Russia total - unclear why")
     print(p[p > 0.1]) 
     
 # 3.2 for summable values summ by districts equals Russian Federation total 
+    print("\nRussia total does not match for seberal dates: OK, Crimea reporting effect for these dates")
     z = abs(okr.sum(axis = 1) - rf)
     print(z[z > 0.1])
     
 # 3.3 with summation matrix for summable values summ by region in district equals district total
+    print("\nSumm by districts - seems to match")
+    # TODO: concat diff by distrist into one dataframe *diffs* 
+    from regions import Regions
+    for r in Regions.district_names():
+        cols = Regions.region_by_district(r)
+        diff = round(reg[cols].sum(axis = 1) - okr[r], 1)
+        print ('\n', r)
+        # partial indexing
+        print (diff["2015-12-01"])
+    
     # todo: need summation matrix by region

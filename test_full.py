@@ -14,16 +14,16 @@ from definitions import definitions
 # Defintions
 # -------------------------------------------------------------------------
 
-XL_FOLDER = os.path.join('xls', 'sample')
+from config import XL_SAMPLE_FOLDER
 
 source_def_sample = {'varname':'PPI_PROM_ytd', 
-     'folder': XL_FOLDER, 
+     'folder': XL_SAMPLE_FOLDER, 
    'filename':'industrial_prices.xls',
       'sheet':'пром.товаров',
      'anchor':'B5', 'anchor_value': 96.6}    
 
 def_dict_2 = {'varname':'SHIPMENTS', 
-     'folder': XL_FOLDER , 
+     'folder': XL_SAMPLE_FOLDER, 
    'filename':'shipment.xls',
       'sheet':'Млн.рублей',
      'anchor':'B6', 'anchor_value': 5331853.711}    

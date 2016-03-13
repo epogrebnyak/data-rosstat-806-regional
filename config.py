@@ -1,6 +1,8 @@
 import os
 ROOT_DATA_FOLDER = os.path.join("xls", "info_stat_01_2016")
 
+XL_SAMPLE_FOLDER = os.path.join('xls', 'sample')
+
 CSV_FOLDER = 'csv'
 
 output_folder = os.path.join("xls", "output")
