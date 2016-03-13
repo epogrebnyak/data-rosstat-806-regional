@@ -31,8 +31,11 @@ definitions = [d for d in definitions if d['sheet'] is not None]
 
 # alter folder in defintions  
 for i, d in enumerate(definitions):
-    definitions[i]['folder'] = os.path.join(ROOT_DATA_FOLDER, d['folder'])
-
+    try:
+        definitions[i]['folder'] = os.path.join(ROOT_DATA_FOLDER, d['folder'])
+    except:
+        raise ValueError(d)
+        
 # main import 
 dfs = [get_df(d) for d in definitions]
 
