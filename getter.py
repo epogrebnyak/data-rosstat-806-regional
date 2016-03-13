@@ -81,17 +81,17 @@ if __name__ == "__main__":
 # 3.1 for summable values summ by regions equals Russian Federation total 
     p = abs(reg.sum(axis = 1) - rf)
     # QUESTION:
-    print("\nSummable regions do not match Russia total - unclear why")
+    print("\nSummable regions do not match Russia total: OK, Crimea reporting effect for these dates")
     print(p[p > 0.1]) 
     
 # 3.2 for summable values summ by districts equals Russian Federation total 
-    print("\nRussia total does not match for seberal dates: OK, Crimea reporting effect for these dates")
+    print("\nRussia total does not match for several dates: OK, Crimea reporting effect for these dates")
     z = abs(okr.sum(axis = 1) - rf)
     print(z[z > 0.1])
     
 # 3.3 with summation matrix for summable values summ by region in district equals district total
     print("\nSumm by districts - seems to match")
-    # TODO: concat diff by distrist into one dataframe *diffs* 
+    # todo: concat diff by distrist into one dataframe *diffs* 
     from regions import Regions
     for r in Regions.district_names():
         cols = Regions.region_by_district(r)
