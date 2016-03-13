@@ -4,7 +4,7 @@ import os
 import pandas as pd
 from definitions import definitions 
 from getter import get_dataframe_by_definition as get_df
-from config import ROOT_DATA_FOLDER, OUTPUT_XLS 
+from config import ROOT_DATA_FOLDER, OUTPUT_XLS
 from regions import Regions
             
 def clean_definitions(definitions):            
@@ -108,11 +108,5 @@ if __name__ == "__main__":
 
     # output 6: write regions only file (num_var sheets)
     if '6' in jobs:
-        to_xl_sheet(df = get_varname_df(), tag = 'varnames', sheet = 'varnames')
-    
+        to_xl_sheet(df = get_varname_df(), tag = 'varnames', sheet = 'varnames') 
 
-# HELP NEEDED 1:
-# format all sheets *rosstat_806_regional.xls* as *formatting_rosstat_806_regional.xls*:
-# - 1st column date format
-# - 1st row font, alignment and word warpping
-# - width of columns
