@@ -26,7 +26,10 @@ def get_dataframe_by_definition(def_dict):
         gen = read_sheet(file_path, def_dict['sheet'], def_dict['anchor']) 
     else:
         gen = read_sheet(file_path, def_dict['sheet'])
-    df = get_dataframe(gen)[Regions.names()]
+    try:
+       df = get_dataframe(gen)[Regions.names()]
+    except:
+       raise ValueError(file_path)    
     df.insert(0, 'varname', def_dict['varname'])
     return df 
     

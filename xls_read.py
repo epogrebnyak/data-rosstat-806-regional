@@ -52,11 +52,16 @@ def seek_origin(sheet,):
             return (r+1,c)
             
 def read_sheet(xl_filename, xl_sheet, anchor=None):
-    """Read data from Excel sheet and yield it as a stream of datapoints"""
+    """Wrapper to read sheet and display filename on error."""
+    try: 
+        return  _read_sheet(xl_filename, xl_sheet, anchor)
+    except:
+        raise ValueError(xl_filename)    
     
-    # determine a start position
-
-         
+def _read_sheet(xl_filename, xl_sheet, anchor=None):
+    """Read data from Excel sheet and yield it as a stream of datapoints."""
+    
+    # determine a start position         
     wb = xlrd.open_workbook(xl_filename)
     cur_sheet = wb.sheet_by_name(xl_sheet)
 
