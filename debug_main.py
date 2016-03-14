@@ -6,6 +6,7 @@ from definitions import definitions
 from getter import get_dataframe_by_definition as get_df
 from config import ROOT_DATA_FOLDER, OUTPUT_XLS
 from regions import Regions
+from xls_write import write_one_sheet, write_book
             
 def clean_definitions(definitions):            
     # repackaging - definitions must have 'sheet' specified
@@ -18,8 +19,8 @@ def clean_definitions(definitions):
         except:
             raise ValueError(d)
     #for debugging
-    print(definitions[:2])
-    return definitions[:2]
+    print(*definitions[:3], sep="\n")
+    return definitions[:3]
 
 def get_var_desc(def_dict):
     vn = def_dict['filename'].replace("-","").replace(".xls","").strip('0123456789').strip()
@@ -32,22 +33,26 @@ def get_varname_df(defs = definitions):
     return zf        
     
 def write_to_xl(df_list, file):
-    with pd.ExcelWriter(file) as writer:
-        # WARNING: if uncommented, this (1) affects formatting of following sheets (1st column not formatted as dates)     
-        #                               (2) causes 'out of memory' warnings when opening file  
-        # get_varname_df().to_excel(writer, sheet_name='varnames')        
-        for df in df_list:
-            try:
-               sn = df['varname'][0]
-            except:
-               raise Exception(df) 
-            df.to_excel(writer, sheet_name=sn)
+    write_book(df_list, file)
+    
+##    with pd.ExcelWriter(file) as writer:
+##        # WARNING: if uncommented, this (1) affects formatting of following sheets (1st column not formatted as dates)     
+##        #                               (2) causes 'out of memory' warnings when opening file  
+##        # get_varname_df().to_excel(writer, sheet_name='varnames')        
+##        for df in df_list:
+##            try:
+##               sn = df['varname'][0]
+##            except:
+##               raise Exception(df) 
+##            df.to_excel(writer, sheet_name=sn)
 
 def to_xl_sheet(df, tag, sheet):
     msg(tag)
-    with pd.ExcelWriter(OUTPUT_XLS[tag]) as writer:
-        df.to_excel(writer, sheet_name=sheet)            
-            
+##    with pd.ExcelWriter(OUTPUT_XLS[tag]) as writer:
+##        df.to_excel(writer, sheet_name=sheet)
+    print(OUTPUT_XLS[tag])
+    write_one_sheet(df, OUTPUT_XLS[tag], sheet)            
+
 def to_xl_book(df_list, tag):
     msg(tag)
     write_to_xl(df_list, file = OUTPUT_XLS[tag])
@@ -72,7 +77,7 @@ def import_csv_data():
 if __name__ == "__main__":
     
     #jobs = '123456'
-    jobs = '12'
+    jobs = '3'
     
     # this import preserves series order 
     dfs = import_xl_data()
