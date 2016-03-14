@@ -20,7 +20,8 @@ import numpy as np
 from xlsxwriter.utility import xl_rowcol_to_cell # (1, 2) -> 'C2'
 from xlsxwriter.utility import xl_cell_to_rowcol # 'C2' -> (1, 2)
 
-from regions import filter_region_name
+from regions import Regions
+filter_region_name = Regions.filter_region_name
 
 def yearmon(year, month):
     return date(year, month, 1)
@@ -51,11 +52,16 @@ def seek_origin(sheet,):
             return (r+1,c)
             
 def read_sheet(xl_filename, xl_sheet, anchor=None):
-    """Read data from Excel sheet and yield it as a stream of datapoints"""
+    """Wrapper to read sheet and display filename on error."""
+    try: 
+        return  _read_sheet(xl_filename, xl_sheet, anchor)
+    except:
+        raise ValueError(xl_filename)    
     
-    # determine a start position
-
-         
+def _read_sheet(xl_filename, xl_sheet, anchor=None):
+    """Read data from Excel sheet and yield it as a stream of datapoints."""
+    
+    # determine a start position         
     wb = xlrd.open_workbook(xl_filename)
     cur_sheet = wb.sheet_by_name(xl_sheet)
 
@@ -67,7 +73,13 @@ def read_sheet(xl_filename, xl_sheet, anchor=None):
     
     # strat year is two rows up from r0,c0
     start_year = int(cur_sheet.cell(r0-2,c0).value.split()[0])
-    assert start_year == 2009
+    try:
+       assert start_year == 2009 or start_year == 2010
+    except:
+       raise ValueError(xl_filename)
+       
+    # ValueError: xls\info_stat_01_2016\01 промышленность\047-049 рыба живая, свежая или охлажденная.xls
+    # starts with 2010
     
     #extraction first column data
     raw_regions = cur_sheet.col_values(0, start_rowx=r0, end_rowx=None)
