@@ -4,7 +4,7 @@ import os
 import pandas as pd
 from definitions import definitions 
 from getter import get_dataframe_by_definition as get_df
-from config import ROOT_DATA_FOLDER, OUTPUT_XLS
+from debug_config import ROOT_DATA_FOLDER, OUTPUT_XLS
 from regions import Regions
 from xls_write import write_one_sheet, write_book
             
@@ -77,7 +77,7 @@ def import_csv_data():
 if __name__ == "__main__":
     
     #jobs = '123456'
-    jobs = '3'
+    jobs = '12'
     
     # this import preserves series order 
     dfs = import_xl_data()
