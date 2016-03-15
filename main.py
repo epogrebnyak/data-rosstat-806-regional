@@ -17,9 +17,8 @@ def clean_definitions(definitions):
             definitions[i]['folder'] = os.path.join(ROOT_DATA_FOLDER, d['folder'])
         except:
             raise ValueError(d)
-    #for debugging
-    print(definitions[:2])
-    return definitions[:2]
+
+    return definitions
 
 def get_var_desc(def_dict):
     vn = def_dict['filename'].replace("-","").replace(".xls","").strip('0123456789').strip()
@@ -71,8 +70,7 @@ def import_csv_data():
     
 if __name__ == "__main__":
     
-    #jobs = '123456'
-    jobs = '12'
+    jobs = '123456'
     
     # this import preserves series order 
     dfs = import_xl_data()
