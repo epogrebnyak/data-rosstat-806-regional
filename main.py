@@ -17,8 +17,7 @@ def clean_definitions(definitions):
             definitions[i]['folder'] = os.path.join(ROOT_DATA_FOLDER, d['folder'])
         except:
             raise ValueError(d)
-    #for debugging
-    #print(definitions)
+
     return definitions
 
 def get_var_desc(def_dict):
@@ -72,7 +71,6 @@ def import_csv_data():
 if __name__ == "__main__":
     
     jobs = '123456'
-    #jobs = '12'
     
     # this import preserves series order 
     dfs = import_xl_data()
@@ -110,5 +108,4 @@ if __name__ == "__main__":
 
     # output 6: write regions only file (num_var sheets)
     if '6' in jobs:
-        to_xl_sheet(df = get_varname_df(), tag = 'varnames', sheet = 'varnames') 
-
+        to_xl_sheet(df = get_varname_df(), tag = 'varnames', sheet = 'varnames')
