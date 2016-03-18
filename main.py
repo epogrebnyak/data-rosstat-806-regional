@@ -18,7 +18,7 @@ def clean_definitions(definitions):
         except:
             raise ValueError(d)
     #for debugging
-    print(definitions)
+    #print(definitions)
     return definitions
 
 def get_var_desc(def_dict):
